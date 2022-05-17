@@ -3,7 +3,6 @@ import Hero from '../Hero/Hero';
 import Container from '../Container/Container';
 import Gallery from '../Gallery/Gallery';
 import Highlights from '../Highlights/Highlights';
-import Carousel from '../Carousel/Carousel';
 
 const Home = () => {
 
@@ -12,7 +11,6 @@ const Home = () => {
       <Hero />
       <Container>
         <Gallery />
-        <Carousel />
         <Highlights />
       </Container>
     </div>

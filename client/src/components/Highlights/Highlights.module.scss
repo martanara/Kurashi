@@ -1,4 +1,18 @@
 @import '../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  display: flex;
+  flex-direction: row;
+
+  .carousel {
+    flex: 6;
+    img {
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .text {
+    flex: 4;
+  }
+}

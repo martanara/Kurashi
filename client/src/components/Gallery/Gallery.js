@@ -7,24 +7,24 @@ const Gallery = () => {
     <Container>
       <div className={styles.row}>
         <div className={styles.element}>
-          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg' />
+          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
         </div>
         <div className={styles.element}>
-        <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg' />
+          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
         </div>
         <div className={styles.element}>
-        <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg' />
+          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
         </div>
       </div>
       <div className={styles.row}>
         <div className={styles.element}>
-        <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg' />
+          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
         </div>
         <div className={styles.element}>
-        <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg' />
+          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
         </div>
         <div className={styles.element}>
-        <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg' />
+          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
       </div>
     </div>
     </Container>
