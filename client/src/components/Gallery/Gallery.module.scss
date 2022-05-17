@@ -1,4 +1,37 @@
 @import '../../styles/settings.scss';
 
-// .root {
-// }
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 450px;
+
+  .element {
+    max-width: 370px;
+    flex: 1;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.row:first-child {
+  margin-bottom: 40px;;
+}
+
+@media (max-width: 1123px){
+  .row {
+    flex-direction: column;
+    height: 1440px;
+    align-items: center;
+    margin: 0;
+
+    .element {
+      min-width: 370px;
+      margin: 15px 0;
+    }
+  }
+}

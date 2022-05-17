@@ -1,3 +1,4 @@
+$color-white: #FFFFFF;
 $color-light: #F5F5F5;
 $color-dark: #2F3037;
 $color-gray: #a9aeb8;
@@ -7,5 +8,13 @@ $color-warning: #e1644e;
 $font-text: 'Crimson Pro', serif;
 
 $radius: 5px;
-$base-size: 12px;
+$base-size: 15px;
 $transition: all 0.5s;
+
+@mixin flex($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+

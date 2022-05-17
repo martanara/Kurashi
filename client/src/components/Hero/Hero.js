@@ -4,7 +4,7 @@ const Hero = () => {
 
   return (
     <div className={styles.root}>
-      <p>I'm a Hero</p>
+      <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg' />
     </div>
   );
 };

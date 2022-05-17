@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Links from './Links';
+import SubFooter from './SubFooter';
 
-describe('Component Links', () => {
+describe('Component SubFooter', () => {
   it('should render without crashing', () => {
-    const component = shallow(<Links />);
+    const component = shallow(<SubFooter />);
     expect(component).toBeTruthy();
   });
 });

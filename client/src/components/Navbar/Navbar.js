@@ -1,10 +1,13 @@
 import styles from './Navbar.module.scss';
+import Container from '../Container/Container';
 
 const Navbar = () => {
 
   return (
     <div className={styles.root}>
-      <p>This is the navbar</p>
+      <Container>
+        <p>This is the navbar</p>
+      </Container>
     </div>
   );
 };

@@ -1,20 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Container from './components/Container/Container';
+import MainLayout from './components/MainLayout/MainLayout';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Item from './components/Item/Item';
 import Category from './components/Cart/Cart';
 import Cart from './components/Cart/Cart';
+import SubFooter from './components/SubFooter/SubFooter';
 import NotFound from './components/NotFound/NotFound';
 
 const App = () => {
   return (
     <BrowserRouter>
-    <main>
+      <MainLayout>
       <Navbar />
-      <Container>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/item/:name" element={<Item />} />
@@ -25,9 +25,9 @@ const App = () => {
             element={<NotFound />}
           />
         </Routes>
-      </Container>
+      <SubFooter />
       <Footer/>
-    </main>
+      </MainLayout>
     </BrowserRouter>
   );
 };
