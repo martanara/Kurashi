@@ -2,17 +2,95 @@
 
 .root {
   position: fixed;
-  min-height: 60px;
+  height: 80px;
   width: 100%;
   background: $color-white;
-  opacity: 0.7;
+  opacity: 0.5;
   transition: $transition;
+  @include flex(row, space-between, center);
+
+  &:hover {
+    opacity: 0.7;
+    transition: $transition;
+  }
+
+  .navBar {
+    min-width: 1200px;
+    @include flex(row, space-between, center);
+
+    .logo {
+      min-width: 200px;
+      text-align: left;
+      img {
+        height: 80px;
+      }
+    }
+
+    .navLinks {
+      @include flex(row, space-between, center);
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: inline-block;
+          margin: 0 10px;
+
+          a {
+            text-decoration: none;
+            color: $color-dark;
+
+            &:hover {
+              color: $color-gray;
+          }
+          }
+        }
+      }
+      .userButtons {
+        .button {
+          color: $color-dark;
+          background: transparent;
+          border: 0;
+          cursor: pointer;
+          transition: $transition;
+          font-size: $base-size;
+
+          &:hover {
+              color: $color-gray;
+          }
+        }
+      }
+    }
+  }
 }
 
-
-.root:hover {
-  opacity: 0.9;
-  transition: $transition;
+@media (max-width: 1200px) {
+  .root {
+    .navBar {
+      min-width: 992px;
+    }
+  }
 }
+
+@media (max-width: 992px) {
+  .root {
+    .navBar {
+      min-width: 768px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    .navBar {
+      min-width: 350px;
+      .logo {
+      min-width: 40px;
+    }
+    }
+  }
+}
+
 
 
