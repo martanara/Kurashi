@@ -16,3 +16,28 @@
     flex: 4;
   }
 }
+
+@media (max-width: 1200px) {
+  .root {
+    .carousel {
+      padding-left: 30px;
+    }
+    .text {
+      padding-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    flex-direction: column;
+    .carousel {
+      padding: 0 30px;
+    }
+    .text {
+      margin-top: 30px;
+      padding: 0 30px;
+    }
+  }
+}
+
