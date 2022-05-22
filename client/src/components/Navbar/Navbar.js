@@ -15,11 +15,11 @@ const Navbar = () => {
         </div>
         <div className={styles.navLinks}>
           <ul>
-            <li><NavLink to='/'>New Arrivals</NavLink></li>
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/'>Kitchen</NavLink></li>
-            <li><NavLink to='/'>Craft</NavLink></li>
-            <li><NavLink to='/'>Fashion</NavLink></li>
+            <li><NavLink to='/category/NewArrivals'>New Arrivals</NavLink></li>
+            <li><NavLink to='/category/Home'>Home</NavLink></li>
+            <li><NavLink to='/category/Kitchen'>Kitchen</NavLink></li>
+            <li><NavLink to='/category/Craft'>Craft</NavLink></li>
+            <li><NavLink to='category/Fashion'>Fashion</NavLink></li>
           </ul>
           <div className={styles.userButtons}>
             <button className={styles.button}><FontAwesomeIcon icon={faCartShopping} /></button>
