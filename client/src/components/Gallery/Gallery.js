@@ -7,24 +7,24 @@ const Gallery = () => {
     <Container>
       <div className={styles.row}>
         <div className={styles.element}>
-          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
+          <img alt='wooden cup' src='images/products/kitchen/pexels-eva-elijas-6944232.jpg'/>
         </div>
         <div className={styles.element}>
-          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
+          <img alt='clay vase' src='images/products/home/pexels-tara-winstead-6692129.jpg'/>
         </div>
         <div className={styles.element}>
-          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
+          <img alt='linen homewear' src='images/products/fashion/pexels-thirdman-6599685.jpg'/>
         </div>
       </div>
       <div className={styles.row}>
         <div className={styles.element}>
-          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
+          <img alt='socks' src='images/products/fashion/pexels-mikhail-nilov-6968427.jpg'/>
         </div>
         <div className={styles.element}>
-          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
+          <img alt='maneki neko' src='images/products/home/pexels-miguel-á-padriñán-932261.jpg'/>
         </div>
         <div className={styles.element}>
-          <img alt='table' src='images/home/pexels-pavel-danilyuk-7674538.jpg'/>
+          <img alt='ceramic cups' src='images/products/kitchen/pexels-pavel-danilyuk-7674537.jpg'/>
       </div>
     </div>
     </Container>
