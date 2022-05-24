@@ -1,11 +1,11 @@
 @import '../../styles/settings.scss';
 
 .root {
-  position: fixed;
+  //position: fixed;
   height: 80px;
   width: 100%;
   background: $color-white;
-  opacity: 0.5;
+  opacity: 0.3;
   transition: $transition;
   @include flex(row, space-between, center);
 
