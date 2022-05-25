@@ -1,6 +1,7 @@
 /* selectors */
 export const getAllProducts = ({products}) => products;
 export const getProductsByCategory = ({products}, categoryName) => products.filter(product => product.categories.includes(categoryName));
+export const getProductById = ({products}, productId) => products.filter(product => product.id === productId);
 
 /* action name creator */
 const reducerName = 'products';

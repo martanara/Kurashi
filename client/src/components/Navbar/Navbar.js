@@ -11,7 +11,7 @@ const Navbar = () => {
       <Container>
       <div className={styles.navBar}>
         <div className={styles.logo}>
-          <NavLink to='/'><img alt='logo' src='images/home/kurashi_logo.png' /></NavLink>
+          <NavLink to='/'><img alt='logo' src='/images/home/kurashi_logo.png' /></NavLink>
         </div>
         <div className={styles.navLinks}>
           <ul>

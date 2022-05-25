@@ -31,7 +31,7 @@ const SubFooter = () => {
         </div>
         <div className={styles.socialMedia}>
           <h4>Follow us on social media</h4>
-            <NavLink to='/'><img alt='logo' src='images/home/kurashi_logo.png' /></NavLink>
+            <NavLink to='/'><img alt='logo' src='/images/home/kurashi_logo.png' /></NavLink>
           <ul>
             <li><button className={styles.button}><FontAwesomeIcon icon={faTwitter} /></button></li>
             <li><button className={styles.button}><FontAwesomeIcon icon={faInstagram} /></button></li>

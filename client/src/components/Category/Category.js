@@ -13,16 +13,21 @@ const Category = () => {
   return (
       <Container>
         <div className={styles.root}>
-          <h2>{name}</h2>
+         {name === 'NewArrivals' ? (<h2>New Arrivals</h2>) : (<h2>{name}</h2>)}
           <div className={styles.imgContainer}>
           <img alt={name} src={`/images/categories/${name}.jpg`} className={styles.categoryCover}/>
           </div>
           <div className={styles.productContainer}>
             {
               products.map(product =>
-              <div key={product.id} className={styles.productBox}>
-              <Link to={`item/${product.name}`}><img alt={product.name} src={product.variants.main}/></Link>
-                  <p><Link to={`item/${product.name}`}>{product.name}</Link></p>
+                <div key={product.id} className={styles.productBox}>
+                  <Link to={`item/${product.id}`}><img alt={product.name} src={product.variants[0].img}/></Link>
+                  <Link to={`item/${product.id}`}>
+                    <div className={styles.productCover}>
+                      <p>View More</p>
+                    </div>
+                  </Link>
+                  <p><Link to={`item/${product.id}`}>{product.name}</Link></p>
                   <p>$ {product.price} USD</p>
                 </div>
               )
