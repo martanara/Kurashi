@@ -2,8 +2,8 @@
 export const getAllOrders = ({orders}) => orders;
 
 /* action name creator */
-const reducerName = 'orders';
-const createActionName = name => `app/${reducerName}/${name}`;
+//const reducerName = 'orders';
+//const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
 

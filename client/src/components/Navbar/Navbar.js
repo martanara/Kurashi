@@ -18,7 +18,7 @@ const Navbar = () => {
             <li><NavLink to='/category/NewArrivals'>New Arrivals</NavLink></li>
             <li><NavLink to='/category/Home'>Home</NavLink></li>
             <li><NavLink to='/category/Kitchen'>Kitchen</NavLink></li>
-            <li><NavLink to='/category/Craft'>Craft</NavLink></li>
+            <li><NavLink to='/category/Stationery'>Stationery</NavLink></li>
             <li><NavLink to='category/Fashion'>Fashion</NavLink></li>
           </ul>
           <div className={styles.userButtons}>
