@@ -1,0 +1,19 @@
+@import '../../styles/settings.scss';
+
+
+.cartProduct {
+  @include flex(row, center, center);
+  gap: 30px;
+  margin-top: 20px;
+
+  img {
+    flex: 1;
+    object-fit: cover;
+    height: 300px;
+    max-width: 250px;
+  }
+
+  .productDetails {
+    flex: 2;
+  }
+}

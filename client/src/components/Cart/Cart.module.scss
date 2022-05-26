@@ -1,4 +1,37 @@
 @import '../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  padding: 120px 30px;
+  @include flex(row, center, center);
+  gap: 20px;
+
+  .cartDetailsCol {
+    flex: 1;
+    @include flex(column, center, left);
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .cartProduct {
+      @include flex(row, center, center);
+      gap: 30px;
+      margin-top: 20px;
+
+      img {
+        flex: 1;
+        object-fit: cover;
+        height: 300px;
+        max-width: 250px;
+      }
+
+      .productDetails {
+        flex: 2;
+      }
+    }
+  }
+
+  .cartSummaryCol {
+    flex: 1;
+  }
+}

@@ -2,7 +2,7 @@ import styles from './Navbar.module.scss';
 import Container from '../Container/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -15,14 +15,14 @@ const Navbar = () => {
         </div>
         <div className={styles.navLinks}>
           <ul>
-            <li><NavLink to='/category/NewArrivals'>New Arrivals</NavLink></li>
+            <li><NavLink to='/category/NewArrivals' >New Arrivals</NavLink></li>
             <li><NavLink to='/category/Home'>Home</NavLink></li>
             <li><NavLink to='/category/Kitchen'>Kitchen</NavLink></li>
             <li><NavLink to='/category/Stationery'>Stationery</NavLink></li>
             <li><NavLink to='category/Fashion'>Fashion</NavLink></li>
           </ul>
           <div className={styles.userButtons}>
-            <button className={styles.button}><FontAwesomeIcon icon={faCartShopping} /></button>
+            <Link to='/cart'><button className={styles.button}><FontAwesomeIcon icon={faCartShopping} /></button></Link>
             <button className={styles.button}><FontAwesomeIcon icon={faUser} /></button>
          </div>
         </div>
