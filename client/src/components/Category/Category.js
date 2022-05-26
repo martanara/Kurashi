@@ -21,7 +21,7 @@ const Category = () => {
             {
               products.map(product =>
                 <div key={product.id} className={styles.productBox}>
-                  <Link to={`item/${product.id}`}><img alt={product.name} src={product.variants[0].img}/></Link>
+                  <Link to={`item/${product.id}`}><img alt={product.name} src={product.img}/></Link>
                   <Link to={`item/${product.id}`}>
                     <div className={styles.productCover}>
                       <p>View More</p>

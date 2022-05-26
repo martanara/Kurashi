@@ -30,6 +30,11 @@
       font-size: $base-size - 3;
     }
 
+    .errorMessage {
+      color: $color-warning;
+      font-weight: 700;
+    }
+
     form {
       @include flex(column, center, left);
       gap: 10px;
