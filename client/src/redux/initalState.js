@@ -168,7 +168,7 @@ export const initialState = {
         stock: 3,
       }],
       variants: [
-        { id: 11,
+        { id: 12,
           color: 'gray',
         }],
       categories: ['NewArrivals', 'Fashion'],
@@ -189,7 +189,7 @@ export const initialState = {
         stock: 3,
       }],
       variants: [
-        { id: 10,
+        { id: 11,
           color: 'white',
         }],
       categories: ['NewArrivals', 'Fashion'],
@@ -250,7 +250,7 @@ export const initialState = {
         stock: 5,
       }],
       variants: [
-        { id: '15',
+        { id: '16',
           color: 'colorful'
         }],
       categories: ['NewArrivals', 'Stationery'],
@@ -267,7 +267,7 @@ export const initialState = {
         stock: 5,
       }],
       variants: [
-        { id: '14',
+        { id: '15',
           color: 'indigo'
         }],
       categories: ['NewArrivals', 'Stationery'],

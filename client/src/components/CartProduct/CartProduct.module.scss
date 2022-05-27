@@ -20,6 +20,11 @@
     flex: 1;
     padding-left: 30px;
 
+    a {
+      text-decoration: none;
+      color: $color-dark;
+    }
+
     .smallDetails {
       font-size: $base-size - 3;
       color: $color-dark;

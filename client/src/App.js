@@ -9,6 +9,7 @@ import Category from './components/Category/Category';
 import Cart from './components/Cart/Cart';
 import SubFooter from './components/SubFooter/SubFooter';
 import NotFound from './components/NotFound/NotFound';
+import Checkout from './components/Checkout/Checkout';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route exact path="/category/:name/item/:id" element={<Item />} />
           <Route exact path="/category/:name" element={<Category />} />
           <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/checkout" element={<Checkout />} />
           <Route
             path="*"
             element={<NotFound />}

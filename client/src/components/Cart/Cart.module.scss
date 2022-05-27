@@ -30,7 +30,7 @@ h2 {
     }
 
     .summaryDetails {
-      text-align: left;
+      @include flex(column, center, left);
 
       h3 {
         margin-bottom: 30px;

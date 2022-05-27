@@ -1,0 +1,30 @@
+@import '../../styles/settings.scss';
+
+
+.form {
+  @include flex(column, center, center);
+  gap: 20px;
+  width: 50%;
+
+  input {
+    padding: 10px;
+    border: 1px solid $color-gray;
+    outline: none;
+    width: 100%;
+  }
+
+  select {
+    padding: 10px;
+    border: 1px solid $color-gray;
+    outline: none;
+    width: 100%;
+    color: $color-dark-gray;
+  }
+
+  .doubleInput {
+    width: 100%;
+    @include flex(row, space-between, center);
+    gap: 10px;
+  }
+}
+

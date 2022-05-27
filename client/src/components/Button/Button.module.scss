@@ -10,6 +10,7 @@
   display: inline-block;
   cursor: pointer;
   transition: $transition;
+  margin-bottom: 15px;
 
   &:hover {
     background-color: darken($color-gray, 20%);

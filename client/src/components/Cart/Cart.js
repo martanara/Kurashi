@@ -10,13 +10,17 @@ const Cart = () => {
   const cart = useSelector(state => getCart(state));
   const cartTotal = useSelector(state => getCartTotal(state))
 
-  const calculateTotal = () => {
-    return cartTotal + 20;
-  };
+  const calculateTotal = () => cartTotal + 20;
+
+  const navigate = useNavigate();
 
   const handleCheckout = () => {
-
+    navigate('/checkout');
   };
+
+  const handleContinue = () => {
+    navigate('/category/NewArrivals');
+  }
 
   return (
     <Container>
@@ -37,6 +41,7 @@ const Cart = () => {
             <p>Shipping: <span>$ 20 USD </span></p>
             <p className={styles.summaryLine}>Total with shipping: <span>$ {calculateTotal()} USD</span></p>
             <Button onClick={handleCheckout}>Proceed to checkout</Button>
+            <Button onClick={handleContinue}>Continue Shopping</Button>
           </div>
         </div>
       </div>)}

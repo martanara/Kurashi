@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { updateCartAmount, removefromCart } from '../../redux/cartRedux';
 import { getProductById } from '../../redux/productsRedux';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom'
 
-const CartProduct = ({id, name, img, price, totalPrice, amount,  color, selectedSize}) => {
+const CartProduct = ({id, name, img, price, totalPrice, amount,  color, selectedSize, categories}) => {
   const product = useSelector(state => getProductById(state, id));
 
   const checkStock = () => {
@@ -31,10 +32,10 @@ const CartProduct = ({id, name, img, price, totalPrice, amount,  color, selected
   return (
     <div className={styles.cartProduct}>
       <div className={styles.imgContainer}>
-        <img alt={name} src={img}/>
+      <Link to={`/category/${categories[1]}/item/${id}`}><img alt={name} src={img}/></Link>
       </div>
       <div className={styles.productDetails}>
-        <h4>{name}</h4>
+        <Link to={`/category/${categories[1]}/item/${id}`}><h4>{name}</h4></Link>
         <p className={styles.smallDetails}>Color: {color}</p>
         <p className={styles.smallDetails}>Size: {selectedSize}</p>
         <p>Price per item: <span>$ {price} USD </span></p>
