@@ -12,10 +12,12 @@ const createActionName = name => `app/${reducerName}/${name}`;
 /* action types */
 const ADD_TO_CART = createActionName('ADD_TO_CART');
 const UPDATE_CART_AMOUNT = createActionName('UPDATE_CART_AMOUNT');
+const REMOVE_FROM_CART = createActionName('REMOVE_FROM_CART');
 
 /* action creators */
 export const addToCart = payload => ({ type: ADD_TO_CART, payload });
 export const updateCartAmount = payload => ({ type: UPDATE_CART_AMOUNT, payload });
+export const removefromCart = payload => ({ type: REMOVE_FROM_CART, payload });
 
 /* thunk creators */
 
@@ -31,8 +33,9 @@ export const reducer = (statePart = [], action = {}) => {
         return [...statePart, { ...action.payload}];
       }
     case UPDATE_CART_AMOUNT:
-      console.log(action.payload)
       return statePart.map(product => product.id === action.payload.id ? {...product, amount: action.payload.amount, totalPrice: action.payload.totalPrice} : product);
+    case REMOVE_FROM_CART:
+      return statePart.filter(product => product.id !== action.payload)
     default:
       return statePart;
   }

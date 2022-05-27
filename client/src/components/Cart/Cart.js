@@ -3,28 +3,43 @@ import Container from '../Container/Container';
 import { useSelector } from 'react-redux';
 import { getCart, getCartTotal } from '../../redux/cartRedux';
 import CartProduct from '../CartProduct/CartProduct';
+import Button from '../Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const cart = useSelector(state => getCart(state));
-  const total = useSelector(state => getCartTotal(state))
+  const cartTotal = useSelector(state => getCartTotal(state))
+
+  const calculateTotal = () => {
+    return cartTotal + 20;
+  };
+
+  const handleCheckout = () => {
+
+  };
 
   return (
     <Container>
-      <div className={styles.root}>
+    <h2>Shopping Cart</h2>
+      {cartTotal === 0 ? (<div className={styles.cartEmpty}><p>Your cart is empty</p></div>) :
+      (<div className={styles.root}>
         <div className={styles.cartDetailsCol}>
-          <h2>Shopping Cart</h2>
-          <div>
-            {cart.map(product => <CartProduct
-              key={product.id}
-              {...product}
-            />)}
-           </div>
+        <h3>Products</h3>
+          {cart.map(product => <CartProduct
+            key={product.id}
+            {...product}
+          />)}
         </div>
         <div className={styles.cartSummaryCol}>
-          <p>Shipping fee</p>
-          <p>Total price {total}</p>
+          <div className={styles.summaryDetails}>
+            <h3>Summary</h3>
+            <p>Subtotal: <span>$ {cartTotal} USD </span></p>
+            <p>Shipping: <span>$ 20 USD </span></p>
+            <p className={styles.summaryLine}>Total with shipping: <span>$ {calculateTotal()} USD</span></p>
+            <Button onClick={handleCheckout}>Proceed to checkout</Button>
+          </div>
         </div>
-      </div>
+      </div>)}
     </Container>
   );
 };

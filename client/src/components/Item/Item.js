@@ -7,20 +7,23 @@ import Container from '../Container/Container';
 import { useState } from 'react';
 import { useNavigate} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import Button from '../Button/Button';
 
 const Item = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
   const { id } = useParams();
-  const { name }= useParams();
+  const { name } = useParams();
 
   const product = useSelector(state => getProductById(state, id));
 
   const [amount, setAmount] = useState(0);
-  const [comment, setComment] = useState('')
-  const [price, setPrice] = useState(product.price)
-  const [error, setError] = useState(false)
+  const [comment, setComment] = useState('');
+  const [price, setPrice] = useState(product.price);
+  const [error, setError] = useState(false);
+  const [stock, setStock] = useState(product.sizes[0].stock);
+  const [selectedSize, setSelectedSize] = useState(product.sizes[0].name);
 
   const handleVariantChange = (variant) => {
     navigate(`/category/${name}/item/${variant}`)
@@ -28,19 +31,25 @@ const Item = () => {
 
   const handleAmountChange = (amount) => {
     setAmount(amount);
-    setError(false)
-    setPrice(product.price * amount)
-  }
+    setError(false);
+    setPrice(product.price * amount);
+  };
+
+  const handlSizeChange = (name) => {
+    setSelectedSize(name);
+    const selected = product.sizes.find(size => size.name === name);
+    setStock(selected.stock);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if(amount < 1) {
-      setError(true)
+      setError(true);
     } else {
-      dispatch(addToCart({...product, amount: parseInt(amount), comment, totalPrice: price}))
-      navigate('/cart')
+      dispatch(addToCart({...product, amount: parseInt(amount), comment, totalPrice: price, selectedSize}));
+      navigate('/cart');
     }
-  }
+  };
 
   return (
     <Container>
@@ -51,11 +60,17 @@ const Item = () => {
         <div className={styles.description}>
           <h3>{product.name}</h3>
           <p>$ {product.price} USD</p>
-          <p>{product.stock} left in stock</p>
+          <p>{stock} left in stock</p>
           <p>{product.description}</p>
           <form onSubmit={handleSubmit}>
             <label htmlFor="amount-input">Choose amount:</label>
             <input type='number' id="amount-input" onChange={e => handleAmountChange(e.target.value)} value={amount} min="0" max={product.stock} className={styles.formInputSmall}/>
+            <label htmlFor="size-select">Select size:</label>
+            <select name="sizes" id="size-select" onChange={e => handlSizeChange(e.target.value)} className={styles.formInputSmall}>
+              {product.sizes.map(size =>
+                <option key={size.name} value={size.name}>{size.name}</option>
+              )}
+            </select>
             <label htmlFor="variant-select">Select option:</label>
             <select name="variants" id="variant-select" onChange={e => handleVariantChange(e.target.value)} className={styles.formInputSmall}>
               <option value={product.color}>{product.color}</option>
@@ -67,7 +82,7 @@ const Item = () => {
             <label htmlFor="comment-input">Add comments:</label>
             <textarea rows="3" cols="50" id="comment-input" value={comment} onChange={e => setComment(e.target.value)} className={styles.formInput}/>
             {error && (<p className={styles.errorMessage}>Please choose product amount</p>)}
-            <button type='submit'>Add to cart</button>
+            <Button type="submit">Add to cart</Button>
           </form>
         </div>
       </div>

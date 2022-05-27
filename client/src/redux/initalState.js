@@ -11,7 +11,10 @@ export const initialState = {
         id: '2',
         color: 'white',
       }],
-      stock: 5,
+      sizes: [{
+        name: 'one size',
+        stock: 5,
+      }],
       categories: ['NewArrivals', 'Kitchen'],
     },
     {
@@ -25,7 +28,10 @@ export const initialState = {
         id: '1',
         color: 'brown',
       }],
-      stock: 5,
+      sizes: [{
+        name: 'one size',
+        stock: 5,
+      }],
       categories: ['NewArrivals', 'Kitchen'],
     },
     {
@@ -36,7 +42,10 @@ export const initialState = {
       img: '/images/products/kitchen/pexels-eva-elijas-6952245.jpg',
       color: 'blue',
       variants: [],
-      stock: 3,
+      sizes: [{
+        name: 'one size',
+        stock: 3,
+      }],
       categories: ['NewArrivals', 'Kitchen'],
     },
     {
@@ -50,7 +59,10 @@ export const initialState = {
         { id: '5',
           color: 'brown'
         }],
-      stock: 8,
+        sizes: [{
+          name: 'one size',
+          stock: 8,
+        }],
       categories: ['NewArrivals', 'Kitchen'],
     },
     {
@@ -64,7 +76,10 @@ export const initialState = {
         { id: '4',
           color: 'tan'
         }],
-      stock: 2,
+        sizes: [{
+          name: 'one size',
+          stock: 2,
+        }],
       categories: ['NewArrivals', 'Kitchen'],
     },
     {
@@ -75,7 +90,10 @@ export const initialState = {
       color: 'black',
       img: '/images/products/kitchen/pexels-eva-elijas-6945199.jpg',
       variants: [],
-      stock: 5,
+      sizes: [{
+        name: 'one size',
+        stock: 5,
+      }],
       categories: ['NewArrivals', 'Kitchen'],
     },
     {
@@ -85,7 +103,10 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       img: '/images/products/home/pexels-miguel-á-padriñán-932261.jpg',
       color: 'tan',
-      stock: 5,
+      sizes: [{
+        name: 'one size',
+        stock: 5,
+      }],
       variants: [],
       categories: ['NewArrivals', 'Home'],
     },
@@ -96,7 +117,10 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       img: '/images/products/home/pexels-eva-elijas-6952248.jpg',
       color: 'brown',
-      stock: 5,
+      sizes: [{
+        name: 'one size',
+        stock: 5,
+      }],
       variants: [],
       categories: ['NewArrivals', 'Home'],
     },
@@ -107,7 +131,10 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       img: '/images/products/home/pexels-stephanie-ho-993626.jpg',
       color: 'brown',
-      stock: 5,
+      sizes: [{
+        name: 'one size',
+        stock: 5,
+      }],
       variants: [],
       categories: ['NewArrivals', 'Home'],
     },
@@ -118,7 +145,10 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       img: '/images/products/home/pexels-tara-winstead-6692129.jpg',
       color: 'teal',
-      stock: 2,
+      sizes: [{
+        name: 'one size',
+        stock: 5,
+      }],
       variants: [],
       categories: ['NewArrivals', 'Home'],
     },
@@ -129,8 +159,14 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       img: '/images/products/fashion/pexels-mikhail-nilov-6968427.jpg',
       color: 'white',
-      stock: 2,
-      sizes: ['S', 'M', 'L'],
+      sizes: [{
+        name: '35-38',
+        stock: 5,
+      },
+      {
+        name: '39-42',
+        stock: 3,
+      }],
       variants: [
         { id: 11,
           color: 'gray',
@@ -144,8 +180,14 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       img: '/images/products/fashion/pexels-alena-shekhovtcova-6995704.jpg',
       color: 'gray',
-      stock: 2,
-      sizes: ['S', 'M', 'L'],
+      sizes: [{
+        name: '35-38',
+        stock: 1,
+      },
+      {
+        name: '39-42',
+        stock: 3,
+      }],
       variants: [
         { id: 10,
           color: 'white',
@@ -159,8 +201,18 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       color: 'colorful',
       img: '/images/products/fashion/pexels-thirdman-6599685.jpg',
-      stock: 1,
-      sizes: ['S', 'M', 'L'],
+      sizes: [{
+        name: 'S',
+        stock: 5,
+      },
+      {
+        name: 'M',
+        stock: 3,
+      },
+      {
+        name: 'L',
+        stock: 3,
+      }],
       variants: [],
       categories: ['NewArrivals', 'Fashion'],
     },
@@ -171,8 +223,18 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       color: 'white',
       img: '/images/products/fashion/pexels-teona-swift-6850609.jpg',
-      sizes: ['S', 'M', 'L'],
-      stock: 3,
+      sizes: [{
+        name: 'S',
+        stock: 5,
+      },
+      {
+        name: 'M',
+        stock: 3,
+      },
+      {
+        name: 'L',
+        stock: 3,
+      }],
       variants: [],
       categories: ['NewArrivals', 'Fashion'],
     },
@@ -183,7 +245,10 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       color: 'indigo',
       img: '/images/products/stationery/pexels-eva-elijas-7967827.jpg',
-      stock: 3,
+      sizes: [{
+        name: 'one size',
+        stock: 5,
+      }],
       variants: [
         { id: '15',
           color: 'colorful'
@@ -197,7 +262,10 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       color: 'colorful',
       img: '/images/products/stationery/pexels-eva-elijas-7967944.jpg',
-      stock: 3,
+      sizes: [{
+        name: 'one size',
+        stock: 5,
+      }],
       variants: [
         { id: '14',
           color: 'indigo'
@@ -211,7 +279,10 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       color: 'white',
       img: '/images/products/stationery/pexels-polina-kovaleva-8101485.jpg',
-      stock: 3,
+      sizes: [{
+        name: 'one size',
+        stock: 3,
+      }],
       variants: [],
       categories: ['NewArrivals', 'Stationery'],
     },
@@ -222,7 +293,10 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       color: 'white',
       img: '/images/products/stationery/pexels-eva-elijas-7957369.jpg',
-      stock: 8,
+      sizes: [{
+        name: 'one size',
+        stock: 8,
+      }],
       variants: [],
       categories: ['NewArrivals', 'Stationery'],
     },
@@ -233,7 +307,10 @@ export const initialState = {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.',
       color: 'silver',
       img: '/images/products/stationery/pexels-karolina-grabowska-4226804.jpg',
-      stock: 3,
+      sizes: [{
+        name: 'one size',
+        stock: 3,
+      }],
       variants: [],
       categories: ['NewArrivals', 'Stationery'],
     },

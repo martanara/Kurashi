@@ -5,6 +5,7 @@ const Gallery = () => {
 
   return (
     <Container>
+    <div className={styles.root}>
       <div className={styles.row}>
         <div className={styles.element}>
           <img alt='wooden cup' src='images/products/kitchen/pexels-eva-elijas-6944232.jpg'/>
@@ -25,6 +26,7 @@ const Gallery = () => {
         </div>
         <div className={styles.element}>
           <img alt='ceramic cups' src='images/products/kitchen/pexels-pavel-danilyuk-7674537.jpg'/>
+        </div>
       </div>
     </div>
     </Container>

@@ -1,0 +1,17 @@
+@import '../../styles/settings.scss';
+
+.button {
+  background-color: $color-gray; /* Green */
+  border: none;
+  color: $color-white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background-color: darken($color-gray, 20%);
+  }
+}

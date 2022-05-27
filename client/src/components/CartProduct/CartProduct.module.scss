@@ -3,17 +3,38 @@
 
 .cartProduct {
   @include flex(row, center, center);
-  gap: 30px;
   margin-top: 20px;
 
-  img {
+  .imgContainer {
     flex: 1;
-    object-fit: cover;
-    height: 300px;
-    max-width: 250px;
+    height: 320px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .productDetails {
-    flex: 2;
+    flex: 1;
+    padding-left: 30px;
+
+    .smallDetails {
+      font-size: $base-size - 3;
+      color: $color-dark;
+    }
+
+    p {
+      color: $color-dark-gray;
+    }
+
+    span {
+      color: $color-dark;
+    }
+
+    .label {
+      color: $color-dark-gray;
+    }
   }
 }

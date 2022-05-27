@@ -1,37 +1,53 @@
 @import '../../styles/settings.scss';
 
+h2 {
+  padding-top: 30px;
+}
+
+.cartEmpty {
+  height: 200px;
+  margin: 100px 0;
+  p {
+    font-size: $base-size * 2;
+    color: $color-warning;
+  }
+}
+
 .root {
-  padding: 120px 30px;
-  @include flex(row, center, center);
-  gap: 20px;
+  @include flex(row, center, flex-start);
+  margin: 40px 0 100px 0;
 
   .cartDetailsCol {
     flex: 1;
     @include flex(column, center, left);
-
-    h2 {
-      margin-bottom: 30px;
-    }
-
-    .cartProduct {
-      @include flex(row, center, center);
-      gap: 30px;
-      margin-top: 20px;
-
-      img {
-        flex: 1;
-        object-fit: cover;
-        height: 300px;
-        max-width: 250px;
-      }
-
-      .productDetails {
-        flex: 2;
-      }
-    }
   }
 
   .cartSummaryCol {
+    @include flex(column, center, center);
     flex: 1;
+    p {
+      color: $color-dark-gray;
+    }
+
+    .summaryDetails {
+      text-align: left;
+
+      h3 {
+        margin-bottom: 30px;
+      }
+
+      p {
+        padding: 5px 0;
+      }
+
+      span {
+        color: $color-dark;
+      }
+
+      .summaryLine {
+        font-weight: 700;
+        margin-bottom: 40px;
+      }
+    }
   }
 }
