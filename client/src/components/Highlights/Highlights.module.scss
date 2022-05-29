@@ -5,6 +5,11 @@
   flex-direction: row;
   margin-bottom: 60px;
 
+  a {
+    text-decoration: none;
+    color: $color-dark;
+  }
+
   .carousel {
     flex: 6;
     img {
@@ -16,6 +21,7 @@
   .text {
     height: 600px;
     flex: 4;
+    @include flex(column, space-between, left);
   }
 }
 

@@ -1,7 +1,8 @@
 @import '../../styles/settings.scss';
 
 .root {
-  //position: fixed;
+  z-index: 99;
+  position: fixed;
   height: 80px;
   width: 100%;
   background: $color-white;

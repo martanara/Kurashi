@@ -3,11 +3,23 @@
 .root {
   padding: 40px 30px;
 
-  .categoryCover {
+  .imgContainer {
     margin: 30px 0;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 300px;
+    }
+
+    .categoryName {
+      position: absolute;
+      bottom: 10%;
+      right: 10%;
+      font-size: $base-size * 2;
+      color: $color-dark;
+    }
   }
 
   .productContainer {

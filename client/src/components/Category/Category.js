@@ -15,7 +15,8 @@ const Category = () => {
         <div className={styles.root}>
          {name === 'NewArrivals' ? (<h2>New Arrivals</h2>) : (<h2>{name}</h2>)}
           <div className={styles.imgContainer}>
-          <img alt={name} src={`/images/categories/${name}.jpg`} className={styles.categoryCover}/>
+            <img alt={name} src={`/images/categories/${name}.jpg`}/>
+            {name === 'NewArrivals' ? (<p className={styles.categoryName}>New Arrivals</p> ) : (<p className={styles.categoryName}>{name}</p> )}
           </div>
           <div className={styles.productContainer}>
             {

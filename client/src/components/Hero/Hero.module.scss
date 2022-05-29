@@ -1,9 +1,29 @@
 @import '../../styles/settings.scss';
 
 .root {
+  position: relative;
+
   img {
     height: 100vh;
     width: 100%;
     object-fit: cover;
+  }
+  .banner {
+    position: absolute;
+    right: 6%;
+    top: 25%;
+    padding: 5px 15px;
+
+    p {
+      span {
+        font-size: $base-size * 2;
+        margin: 20px;
+      }
+
+      font-size: $base-size + 5;
+      font-weight: 400;
+      word-spacing: 5px;
+      color: $color-black;
+    }
   }
 }

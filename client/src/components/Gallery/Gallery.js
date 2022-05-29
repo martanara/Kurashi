@@ -1,5 +1,6 @@
 import styles from './Gallery.module.scss';
 import Container from '../Container/Container';
+import { Link } from 'react-router-dom';
 
 const Gallery = () => {
 
@@ -8,24 +9,58 @@ const Gallery = () => {
     <div className={styles.root}>
       <div className={styles.row}>
         <div className={styles.element}>
-          <img alt='wooden cup' src='images/products/kitchen/pexels-eva-elijas-6944232.jpg'/>
+          <Link to='/category/Home'>
+            <img alt='woods' src='/images/featured/karen-OeU_hJuxv0E-unsplash.jpg'/>
+            <div className={styles.bannerSmall}>
+              <p>New Arrivals</p>
+              <p>everything for your plants</p>
+            </div>
+          </Link>
         </div>
         <div className={styles.element}>
-          <img alt='clay vase' src='images/products/home/pexels-tara-winstead-6692129.jpg'/>
+          <Link to='/category/Kitchen'>
+            <img alt='tea ceremony' src='/images/featured/pexels-charlotte-may-5946632.jpg'/>
+            <div className={styles.bannerLarge}>
+              <p>Tea Ceremony</p>
+            </div>
+          </Link>
         </div>
         <div className={styles.element}>
-          <img alt='linen homewear' src='images/products/fashion/pexels-thirdman-6599685.jpg'/>
+          <Link to='/category/Fashion'>
+            <img alt='stationery' src='/images/featured/pexels-polina-kovaleva-8101480.jpg'/>
+            <div className={styles.bannerSmall}>
+              <p>Back in Stock</p>
+              <p>elegant stationery</p>
+            </div>
+          </Link>
         </div>
       </div>
       <div className={styles.row}>
         <div className={styles.element}>
-          <img alt='socks' src='images/products/fashion/pexels-mikhail-nilov-6968427.jpg'/>
+          <Link to='/category/Fashion'>
+            <img alt='girl with sandals' src='/images/featured/pexels-alena-darmel-8989556.jpg'/>
+            <div className={styles.bannerSmall}>
+              <p>Summer fashion</p>
+              <p>linen, cotton and more</p>
+            </div>
+          </Link>
         </div>
         <div className={styles.element}>
-          <img alt='maneki neko' src='images/products/home/pexels-miguel-á-padriñán-932261.jpg'/>
+          <Link to='/category/Home'>
+            <img alt='ikebana' src='/images/featured/linh-le-uP2QOCUBu7A-unsplash.jpg'/>
+            <div className={styles.bannerLarge}>
+            <p>Ikebana</p>
+            </div>
+          </Link>
         </div>
         <div className={styles.element}>
-          <img alt='ceramic cups' src='images/products/kitchen/pexels-pavel-danilyuk-7674537.jpg'/>
+          <Link to='/category/Home'>
+            <img alt='clay pottery' src='/images/featured/pexels-tara-winstead-6692149.jpg'/>
+            <div className={styles.bannerSmall}>
+              <p>New Arrivals</p>
+              <p>minimalistic clay pottery</p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
