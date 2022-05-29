@@ -1,4 +1,12 @@
 @import '../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  height: 200px;
+  margin: 100px 0;
+  text-align: center;
+
+  p {
+    font-size: $base-size * 2;
+    color: $color-warning;
+  }
+}

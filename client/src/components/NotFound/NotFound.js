@@ -1,11 +1,14 @@
 import styles from './NotFound.module.scss';
+import Container from '../Container/Container';
 
 const NotFound = () => {
 
   return (
-    <div className={styles.root}>
-      <p>Page not found</p>
-    </div>
+    <Container>
+      <div className={styles.root}>
+        <p>Page not found</p>
+      </div>
+    </Container>
   );
 };
 
