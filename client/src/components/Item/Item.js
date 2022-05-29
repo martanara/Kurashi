@@ -30,9 +30,12 @@ const Item = () => {
   };
 
   const handleAmountChange = (amount) => {
-    setAmount(amount);
-    setError(false);
-    setPrice(product.price * amount);
+    if(amount > stock) setAmount(stock);
+    else {
+      setAmount(amount);
+      setError(false);
+      setPrice(product.price * amount);
+    }
   };
 
   const handlSizeChange = (name) => {
@@ -64,7 +67,7 @@ const Item = () => {
           <p>{product.description}</p>
           <form onSubmit={handleSubmit}>
             <label htmlFor="amount-input">Choose amount:</label>
-            <input type='number' id="amount-input" onChange={e => handleAmountChange(e.target.value)} value={amount} min="0" max={stock.toString()} className={styles.formInputSmall}/>
+            <input type="number" id="amount-input" onChange={e => handleAmountChange(e.target.value)} value={amount} min="0" max={stock.toString()} className={styles.formInputSmall}/>
             <label htmlFor="size-select">Select size:</label>
             <select name="sizes" id="size-select" onChange={e => handlSizeChange(e.target.value)} className={styles.formInputSmall}>
               {product.sizes.map(size =>
