@@ -64,7 +64,7 @@ const Item = () => {
           <p>{product.description}</p>
           <form onSubmit={handleSubmit}>
             <label htmlFor="amount-input">Choose amount:</label>
-            <input type='number' id="amount-input" onChange={e => handleAmountChange(e.target.value)} value={amount} min="0" max={product.stock} className={styles.formInputSmall}/>
+            <input type='number' id="amount-input" onChange={e => handleAmountChange(e.target.value)} value={amount} min="0" max={stock.toString()} className={styles.formInputSmall}/>
             <label htmlFor="size-select">Select size:</label>
             <select name="sizes" id="size-select" onChange={e => handlSizeChange(e.target.value)} className={styles.formInputSmall}>
               {product.sizes.map(size =>

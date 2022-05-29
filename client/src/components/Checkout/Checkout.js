@@ -40,7 +40,7 @@ const Checkout = () => {
       <div className={styles.root}>
         <div className={styles.orderSummary}>
           {cart.map(product =>
-            <div key={product.id} className={styles.itemContainer}>
+            <div key={product._id} className={styles.itemContainer}>
               <div className={styles.itemImg}>
                 <img alt={product.name} src={product.img}/>
               </div>

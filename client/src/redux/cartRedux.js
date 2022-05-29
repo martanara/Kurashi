@@ -21,11 +21,15 @@ export const removefromCart = payload => ({ type: REMOVE_FROM_CART, payload });
 
 /* thunk creators */
 
+/* Initial State */
+
+const initialState = [];
+
 /* reducer */
-export const reducer = (statePart = [], action = {}) => {
+export const reducer = (statePart = initialState, action = {}) => {
   switch (action.type) {
     case ADD_TO_CART:
-      const existingProduct = statePart.find(product => product.id === action.payload.id);
+      const existingProduct = statePart.find(product => product._id === action.payload._id);
       if(existingProduct) {
         existingProduct.amount = existingProduct.amount + action.payload.amount;
         return statePart;
@@ -33,9 +37,9 @@ export const reducer = (statePart = [], action = {}) => {
         return [...statePart, { ...action.payload}];
       }
     case UPDATE_CART_AMOUNT:
-      return statePart.map(product => product.id === action.payload.id ? {...product, amount: action.payload.amount, totalPrice: action.payload.totalPrice} : product);
+      return statePart.map(product => product._id === action.payload.id ? {...product, amount: action.payload.amount, totalPrice: action.payload.totalPrice} : product);
     case REMOVE_FROM_CART:
-      return statePart.filter(product => product.id !== action.payload)
+      return statePart.filter(product => product._id !== action.payload)
     default:
       return statePart;
   }

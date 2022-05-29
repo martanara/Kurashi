@@ -6,8 +6,8 @@ import { getProductById } from '../../redux/productsRedux';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom'
 
-const CartProduct = ({id, name, img, price, totalPrice, amount,  color, selectedSize, categories}) => {
-  const product = useSelector(state => getProductById(state, id));
+const CartProduct = ({ _id, name, img, price, totalPrice, amount,  color, selectedSize, categories }) => {
+  const product = useSelector(state => getProductById(state, _id));
 
   const checkStock = () => {
     const size = product.sizes.find(size => size.name === selectedSize)
@@ -22,20 +22,20 @@ const CartProduct = ({id, name, img, price, totalPrice, amount,  color, selected
   const handleAmountChange = (newAmount) => {
     setQuantity(newAmount);
     setItemTotalPrice(price * newAmount)
-    dispatch(updateCartAmount({id, amount: newAmount, totalPrice: price * newAmount}))
+    dispatch(updateCartAmount({_id, amount: newAmount, totalPrice: price * newAmount}))
   }
 
   const removeItem = () => {
-    dispatch(removefromCart(id))
+    dispatch(removefromCart(_id))
   }
 
   return (
     <div className={styles.cartProduct}>
       <div className={styles.imgContainer}>
-      <Link to={`/category/${categories[1]}/item/${id}`}><img alt={name} src={img}/></Link>
+      <Link to={`/category/${categories[1]}/item/${_id}`}><img alt={name} src={img}/></Link>
       </div>
       <div className={styles.productDetails}>
-        <Link to={`/category/${categories[1]}/item/${id}`}><h4>{name}</h4></Link>
+        <Link to={`/category/${categories[1]}/item/${_id}`}><h4>{name}</h4></Link>
         <p className={styles.smallDetails}>Color: {color}</p>
         <p className={styles.smallDetails}>Size: {selectedSize}</p>
         <p>Price per item: <span>$ {price} USD </span></p>

@@ -19,7 +19,7 @@ app.use('/api', ordersRoutes);
 
 /* API ERROR PAGES */
 app.use('/api', (req, res) => {
-  res.status(404).send({ post: 'Not found...' });
+  res.status(404).send({ page: 'Not found...' });
 });
 
 /* REACT WEBSITE */
@@ -32,9 +32,10 @@ const NODE_ENV = process.env.NODE_ENV;
 let dbUri = '';
 
 /* MONGOOSE */
+dbUri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.rt8m7.mongodb.net/kurashi?retryWrites=true&w=majority`;
 
-if(NODE_ENV === 'production') dbUri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.rt8m7.mongodb.net/kurashi?retryWrites=true&w=majority`;
-else dbUri = 'mongodb://localhost:27017/kurashi';
+// if(NODE_ENV === 'production') dbUri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.rt8m7.mongodb.net/kurashi?retryWrites=true&w=majority`;
+// else dbUri = 'mongodb://localhost:27017/kurashi';
 
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 

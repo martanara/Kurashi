@@ -1,5 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+
+import { loadProductsRequest } from './redux/productsRedux';
+
 import MainLayout from './components/MainLayout/MainLayout';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
@@ -12,6 +17,10 @@ import NotFound from './components/NotFound/NotFound';
 import Checkout from './components/Checkout/Checkout';
 
 const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => dispatch(loadProductsRequest()), [dispatch]);
+
   return (
     <BrowserRouter>
       <MainLayout>

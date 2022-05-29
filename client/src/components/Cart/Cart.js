@@ -30,7 +30,7 @@ const Cart = () => {
         <div className={styles.cartDetailsCol}>
         <h3>Products</h3>
           {cart.map(product => <CartProduct
-            key={product.id}
+            key={product._id}
             {...product}
           />)}
         </div>
