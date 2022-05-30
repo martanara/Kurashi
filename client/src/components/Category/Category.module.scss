@@ -1,11 +1,15 @@
 @import '../../styles/settings.scss';
 
 .root {
-  padding: 40px 30px;
+  padding: 80px 30px;
+
+  h2 {
+    padding: 30px;
+  }
 
   .imgContainer {
-    margin: 30px 0;
     position: relative;
+    padding-bottom: 40px;
 
     img {
       object-fit: cover;
@@ -23,9 +27,9 @@
   }
 
   .productContainer {
-    @include flex(row, space-evenly, center);
+    @include flex(row, center, center);
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 
     .productBox {
       width: 340px;

@@ -15,6 +15,8 @@ import Container from '../Container/Container';
 import styles from './Item.module.scss';
 
 const Item = () => {
+  window.scrollTo(0, 0);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -24,7 +26,6 @@ const Item = () => {
   const product = useSelector(state => getProductById(state, id));
 
   const [amount, setAmount] = useState(0);
-  const [comment, setComment] = useState('');
   const [price, setPrice] = useState(product.price);
   const [error, setError] = useState(false);
   const [stock, setStock] = useState(product.sizes[0].stock);
@@ -54,7 +55,7 @@ const Item = () => {
     if(amount < 1) {
       setError(true);
     } else {
-      dispatch(addToCart({...product, amount: parseInt(amount), comment, totalPrice: price, selectedSize}));
+      dispatch(addToCart({...product, amount: parseInt(amount), totalPrice: price, selectedSize}));
       navigate('/cart');
     }
   };
@@ -62,9 +63,7 @@ const Item = () => {
   return (
     <Container>
       <div className={styles.root}>
-        <div className={styles.imgContainer}>
-          <img alt={product.name} src={product.img}/>
-        </div>
+        <img alt={product.name} src={product.img}/>
         <div className={styles.description}>
           <h3>{product.name}</h3>
           <p>$ {product.price} USD</p>
@@ -87,12 +86,10 @@ const Item = () => {
               )}
             </select>
             <p>Total price: $ {price} USD <span>(shipping fee will be calculated in the next step)</span></p>
-            <label htmlFor="comment-input">Add comments:</label>
-            <textarea rows="3" cols="50" id="comment-input" value={comment} onChange={e => setComment(e.target.value)} className={styles.formInput}/>
             {error && (<p className={styles.errorMessage}>Please choose product amount</p>)}
-            <Button type="submit">Add to cart</Button>
           </form>
         </div>
+        <Button type="submit">Add to cart</Button>
       </div>
     </Container>
   );

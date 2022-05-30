@@ -26,8 +26,6 @@ const Highlights = () => {
           <p>
             Etiam sollicitudin, nisl ut vehicula ornare, sem magna imperdiet elit, id finibus magna ligula at odio. Morbi est elit, maximus sit amet justo in, luctus facilisis urna.
             Nullam ut bibendum risus, at tristique erat. Mauris vestibulum condimentum sagittis.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-            In pharetra volutpat felis, sed sagittis sapien rutrum et.
           </p>
           <p>
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.

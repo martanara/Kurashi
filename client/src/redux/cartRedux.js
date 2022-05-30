@@ -29,17 +29,11 @@ const initialState = [];
 export const reducer = (statePart = initialState, action = {}) => {
   switch (action.type) {
     case ADD_TO_CART:
-      const existingProduct = statePart.find(product => product._id === action.payload._id);
-      if(existingProduct) {
-        existingProduct.amount = existingProduct.amount + action.payload.amount;
-        return statePart;
-      } else {
-        return [...statePart, { ...action.payload}];
-      }
+      return [...statePart, { ...action.payload}];
     case UPDATE_CART_AMOUNT:
       return statePart.map(product => product._id === action.payload.id ? {...product, amount: action.payload.amount, totalPrice: action.payload.totalPrice} : product);
     case REMOVE_FROM_CART:
-      return statePart.filter(product => product._id !== action.payload)
+      return statePart.filter(product => product._id !== action.payload);
     default:
       return statePart;
   }

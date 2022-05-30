@@ -1,9 +1,10 @@
 @import '../../styles/settings.scss';
 
 .root {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 60px;
+  @include flex (row, center, top);
+  flex-wrap: wrap;
+  padding: 30px 30px 90px 30px;
+  gap: 5px;
 
   a {
     text-decoration: none;
@@ -11,40 +12,31 @@
   }
 
   .carousel {
-    flex: 6;
     img {
-      width: 90%;
+      width: 500px;
       height: 600px;
       object-fit: cover;
     }
   }
   .text {
-    height: 600px;
-    flex: 4;
-    @include flex(column, space-between, left);
+    padding: 10px 30px;
+    h2 {
+      padding: 0;
+    }
+    width: 400px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 576px) {
   .root {
     .carousel {
-      padding-left: 30px;
+      img {
+        width: 320px;
+        height: 420px;
+      }
     }
     .text {
-      padding-right: 30px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .root {
-    flex-direction: column;
-    .carousel {
-      padding: 0 30px;
-    }
-    .text {
-      margin-top: 30px;
-      padding: 0 30px;
+      width: 350px;
     }
   }
 }

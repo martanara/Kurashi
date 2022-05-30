@@ -1,20 +1,21 @@
+import React, { useEffect } from 'react';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
 
 import { loadProductsRequest } from './redux/productsRedux';
 
-import MainLayout from './components/MainLayout/MainLayout';
-import Home from './components/Home/Home';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import Item from './components/Item/Item';
 import Category from './components/Category/Category';
 import Cart from './components/Cart/Cart';
-import SubFooter from './components/SubFooter/SubFooter';
-import NotFound from './components/NotFound/NotFound';
 import Checkout from './components/Checkout/Checkout';
+import Footer from './components/Footer/Footer';
+import Item from './components/Item/Item';
+import Home from './components/Home/Home';
+import MainLayout from './components/MainLayout/MainLayout';
+import Navbar from './components/Navbar/Navbar';
+import NotFound from './components/NotFound/NotFound';
+import SubFooter from './components/SubFooter/SubFooter';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <MainLayout>
-      <Navbar />
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/category/:name/item/:id" element={<Item />} />
@@ -36,8 +37,8 @@ const App = () => {
             element={<NotFound />}
           />
         </Routes>
-      <SubFooter />
-      <Footer/>
+        <SubFooter />
+        <Footer/>
       </MainLayout>
     </BrowserRouter>
   );

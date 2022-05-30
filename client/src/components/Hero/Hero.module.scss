@@ -11,8 +11,9 @@
   .banner {
     position: absolute;
     right: 6%;
-    top: 25%;
+    top: 40%;
     padding: 5px 15px;
+    background: rgba(0, 0, 0, .2);
 
     p {
       span {
@@ -20,10 +21,27 @@
         margin: 20px;
       }
 
-      font-size: $base-size + 5;
+      font-size: $base-size + 10;
       font-weight: 400;
       word-spacing: 5px;
-      color: $color-black;
+      color: $color-white;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .root {
+    .banner {
+      position: absolute;
+      top: 50%;
+      left: 3%;
+
+      p {
+        span {
+          font-size: $base-size * 2;
+        }
+        font-size: $base-size + 3;
+      }
     }
   }
 }

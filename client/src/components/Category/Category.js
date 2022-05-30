@@ -12,6 +12,8 @@ import Container from '../Container/Container';
 import styles from './Category.module.scss';
 
 const Category = () => {
+  window.scrollTo(0, 0);
+
   const { name } = useParams();
 
   const products = useSelector(state => getProductsByCategory(state, name));
