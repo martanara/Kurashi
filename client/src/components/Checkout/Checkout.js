@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Checkout.module.scss';
 import Container from '../Container/Container';
 import { useSelector } from 'react-redux';
@@ -34,7 +35,7 @@ const Checkout = () => {
 
   const calculateTotal = () => cartTotal + 20;
 
-  if(cart.length === 0) return <Navigate to='/'/>
+  if(cart.length === 0) return <Navigate to='/'/>;
   return (
     <Container>
       <div className={styles.root}>

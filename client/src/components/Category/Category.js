@@ -1,9 +1,15 @@
-import styles from './Category.module.scss';
+import React from 'react';
+
 import { useParams } from 'react-router';
+
+import { Link } from 'react-router-dom';
+
 import { useSelector } from 'react-redux';
 import { getProductsByCategory } from '../../redux/productsRedux';
+
 import Container from '../Container/Container';
-import { Link } from 'react-router-dom';
+
+import styles from './Category.module.scss';
 
 const Category = () => {
   const { name } = useParams();
@@ -11,31 +17,31 @@ const Category = () => {
   const products = useSelector(state => getProductsByCategory(state, name));
 
   return (
-      <Container>
-        <div className={styles.root}>
-         {name === 'NewArrivals' ? (<h2>New Arrivals</h2>) : (<h2>{name}</h2>)}
-          <div className={styles.imgContainer}>
-            <img alt={name} src={`/images/categories/${name}.jpg`}/>
-            {name === 'NewArrivals' ? (<p className={styles.categoryName}>New Arrivals</p> ) : (<p className={styles.categoryName}>{name}</p> )}
-          </div>
-          <div className={styles.productContainer}>
-            {
-              products.map(product =>
-                <div key={product._id} className={styles.productBox}>
-                  <Link to={`item/${product._id}`}><img alt={product.name} src={product.img}/></Link>
-                  <Link to={`item/${product._id}`}>
-                    <div className={styles.productCover}>
-                      <p>View More</p>
-                    </div>
-                  </Link>
-                  <p><Link to={`item/${product._id}`}>{product.name}</Link></p>
-                  <p>$ {product.price} USD</p>
-                </div>
-              )
-            }
-          </div>
+    <Container>
+      <div className={styles.root}>
+        {name === 'NewArrivals' ? (<h2>New Arrivals</h2>) : (<h2>{name}</h2>)}
+        <div className={styles.imgContainer}>
+          <img alt={name} src={`/images/categories/${name}.jpg`}/>
+          {name === 'NewArrivals' ? (<p className={styles.categoryName}>New Arrivals</p> ) : (<p className={styles.categoryName}>{name}</p>)}
         </div>
-      </Container>
+        <div className={styles.productContainer}>
+          {
+            products.map(product =>
+              <div key={product._id} className={styles.productBox}>
+                <Link to={`item/${product._id}`}><img alt={product.name} src={product.img}/></Link>
+                <Link to={`item/${product._id}`}>
+                  <div className={styles.productCover}>
+                    <p>View More</p>
+                  </div>
+                </Link>
+                <p><Link to={`item/${product._id}`}>{product.name}</Link></p>
+                <p>$ {product.price} USD</p>
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </Container>
   );
 };
 

@@ -1,7 +1,11 @@
-import styles from './Highlights.module.scss';
+import React from 'react';
+
 import { Link } from 'react-router-dom';
-import Container from '../Container/Container';
+
 import Button from '../Button/Button';
+import Container from '../Container/Container';
+
+import styles from './Highlights.module.scss';
 
 const Highlights = () => {
 
@@ -9,10 +13,10 @@ const Highlights = () => {
     <Container>
       <div className={styles.root}>
         <div className={styles.carousel}>
-        <Link to='/category/Fashion/item/62937aa0a1b69d98b5013275'><img alt='girl in a white blouse' src='images/products/fashion/pexels-teona-swift-6850609.jpg' /></Link>
+          <Link to="/category/Fashion/item/62937aa0a1b69d98b5013275"><img alt="girl in a white blouse" src="images/products/fashion/pexels-teona-swift-6850609.jpg" /></Link>
         </div>
         <div className={styles.text}>
-          <Link to='/category/Fashion/item/62937aa0a1b69d98b5013275'><h2>Cotton Summer Blouse</h2></Link>
+          <Link to="/category/Fashion/item/62937aa0a1b69d98b5013275"><h2>Cotton Summer Blouse</h2></Link>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui.
@@ -30,7 +34,7 @@ const Highlights = () => {
             Phasellus accumsan mi mollis massa luctus tincidunt.
             Proin ullamcorper est in enim porta, nec aliquam metus hendrerit.
           </p>
-          <Link to='/category/Fashion/item/62937aa0a1b69d98b5013275'><Button>See in store</Button></Link>
+          <Link to="/category/Fashion/item/62937aa0a1b69d98b5013275"><Button>See in store</Button></Link>
         </div>
       </div>
     </Container>

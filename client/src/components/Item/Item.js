@@ -1,17 +1,22 @@
-import styles from './Item.module.scss';
+import React, { useState } from 'react';
+
 import { useParams } from 'react-router';
-import { useSelector } from 'react-redux';
+
+import { useNavigate} from 'react-router-dom';
+
+import { useSelector, useDispatch } from 'react-redux';
+
 import { getProductById } from '../../redux/productsRedux';
 import { addToCart } from '../../redux/cartRedux';
-import Container from '../Container/Container';
-import { useState } from 'react';
-import { useNavigate} from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+
 import Button from '../Button/Button';
+import Container from '../Container/Container';
+
+import styles from './Item.module.scss';
 
 const Item = () => {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const { id } = useParams();
   const { name } = useParams();
@@ -26,7 +31,7 @@ const Item = () => {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0].name);
 
   const handleVariantChange = (variant) => {
-    navigate(`/category/${name}/item/${variant}`)
+    navigate(`/category/${name}/item/${variant}`);
   };
 
   const handleAmountChange = (amount) => {

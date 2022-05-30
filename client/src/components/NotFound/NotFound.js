@@ -1,5 +1,8 @@
-import styles from './NotFound.module.scss';
+import React from 'react';
+
 import Container from '../Container/Container';
+
+import styles from './NotFound.module.scss';
 
 const NotFound = () => {
 
