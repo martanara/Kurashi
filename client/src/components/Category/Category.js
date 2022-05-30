@@ -22,7 +22,7 @@ const Category = () => {
     <Container>
       <div className={styles.root}>
         <div className={styles.imgContainer}>
-          <img alt={name} src={`/images/categories/${name}.jpg`}/>
+          <img alt={name} src={`/images/categories/${name.toLowerCase()}.jpg`}/>
           {name === 'NewArrivals' ? (<p className={styles.categoryName}>New Arrivals</p> ) : (<p className={styles.categoryName}>{name}</p>)}
         </div>
         <div className={styles.productContainer}>
