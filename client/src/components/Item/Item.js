@@ -15,8 +15,6 @@ import Container from '../Container/Container';
 import styles from './Item.module.scss';
 
 const Item = () => {
-  window.scrollTo(0, 0);
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -87,9 +85,9 @@ const Item = () => {
             </select>
             <p>Total price: $ {price} USD <span>(shipping fee will be calculated in the next step)</span></p>
             {error && (<p className={styles.errorMessage}>Please choose product amount</p>)}
+            <Button type="submit" className={styles.button}>Add to cart</Button>
           </form>
         </div>
-        <Button type="submit">Add to cart</Button>
       </div>
     </Container>
   );

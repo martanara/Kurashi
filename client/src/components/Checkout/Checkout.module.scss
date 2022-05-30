@@ -1,7 +1,7 @@
 @import '../../styles/settings.scss';
 
 .root {
-  margin: 30px 0;
+  padding: 120px 30px 60px 30px;
   @include flex(column, center, center);
 
   .orderSummary {
@@ -66,12 +66,42 @@
     a {
       text-decoration: none;
       margin-left: 20px;
-      color: $color-dark;
+      color: $color-sakura-pink;
       font-weight: 700;
 
       &:hover {
         color: $color-gray;
       }
+    }
+  }
+
+  .form {
+    @include flex(column, center, center);
+    gap: 20px;
+    width: 50%;
+
+    input {
+      padding: 10px;
+      border: 1px solid $color-gray;
+      outline: none;
+      width: 100%;
+    }
+
+    select {
+      padding: 10px;
+      border: 1px solid $color-gray;
+      outline: none;
+      width: 100%;
+      color: $color-dark-gray;
+    }
+
+    .doubleInput {
+      width: 100%;
+      @include flex(row, space-between, center);
+      gap: 10px;
+    }
+    .error {
+      color: $color-warning;
     }
   }
 }

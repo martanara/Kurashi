@@ -28,7 +28,7 @@ const CartProduct = ({ _id, name, img, price, totalPrice, amount,  color, select
   const handleAmountChange = (newAmount) => {
     setQuantity(newAmount);
     setItemTotalPrice(price * newAmount);
-    dispatch(updateCartAmount({_id, amount: newAmount, totalPrice: price * newAmount}));
+    dispatch(updateCartAmount({_id, amount: parseInt(newAmount), totalPrice: price * newAmount}));
   };
 
   const removeItem = () => {

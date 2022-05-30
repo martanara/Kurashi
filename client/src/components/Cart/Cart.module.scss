@@ -1,9 +1,5 @@
 @import '../../styles/settings.scss';
 
-h2 {
-  padding: 120px 30px;
-}
-
 .cartEmpty {
   height: 200px;
   text-align: center;
@@ -15,39 +11,48 @@ h2 {
 }
 
 .root {
-  @include flex(row, center, flex-start);
-  margin: 40px 0 100px 0;
+  padding: 120px 30px 60px 30px;
 
-  .cartDetailsCol {
-    flex: 1;
-    @include flex(column, center, left);
-  }
+  .cartContainer {
+    margin-top: 40px;
+    padding: 30px 0;
+    border-top: 1px $color-gray solid;
+    border-bottom: 1px $color-gray solid;
+    @include flex(row, space-around, flex-start);
+    flex-wrap: wrap;
+    gap: 30px;
 
-  .cartSummaryCol {
-    @include flex(column, center, center);
-    flex: 1;
-    p {
-      color: $color-dark-gray;
+    .cartDetailsCol {
+      @include flex(column, center, left);
+      width: 500px;
     }
 
-    .summaryDetails {
-      @include flex(column, center, left);
-
-      h3 {
-        margin-bottom: 30px;
-      }
+    .cartSummaryCol {
+      width: 375px;
 
       p {
-        padding: 5px 0;
+        color: $color-dark-gray;
       }
 
-      span {
-        color: $color-dark;
-      }
+      .summaryDetails {
+        @include flex(column, center, center);
 
-      .summaryLine {
-        font-weight: 700;
-        margin-bottom: 40px;
+        h3 {
+          margin-bottom: 30px;
+        }
+
+        p {
+          margin: 15px;
+        }
+
+        span {
+          color: $color-dark;
+        }
+
+        .summaryLine {
+          font-weight: 700;
+          margin-bottom: 40px;
+        }
       }
     }
   }

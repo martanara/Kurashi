@@ -29,12 +29,24 @@ const initialState = [];
 export const reducer = (statePart = initialState, action = {}) => {
   switch (action.type) {
     case ADD_TO_CART:
-      return [...statePart, { ...action.payload}];
+      // eslint-disable-next-line
+      const existingProduct = statePart.find(product => product._id === action.payload._id);
+      if(existingProduct) {
+        existingProduct.amount = existingProduct.amount + action.payload.amount;
+        existingProduct.totalPrice += action.payload.totalPrice;
+        return statePart;
+      } else {
+        return [...statePart, { ...action.payload}];
+      }
     case UPDATE_CART_AMOUNT:
-      return statePart.map(product => product._id === action.payload.id ? {...product, amount: action.payload.amount, totalPrice: action.payload.totalPrice} : product);
+      console.log(action.payload);
+      return statePart.map(product => product._id === action.payload._id ? {...product, amount: action.payload.amount, totalPrice: action.payload.totalPrice} : product);
     case REMOVE_FROM_CART:
       return statePart.filter(product => product._id !== action.payload);
     default:
       return statePart;
   }
 };
+
+
+//return [...statePart, { ...action.payload}];

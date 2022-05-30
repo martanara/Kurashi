@@ -29,9 +29,9 @@ const Cart = () => {
 
   return (
     <Container>
-      <h2>Shopping Cart</h2>
-      {cartTotal === 0 ? (<div className={styles.cartEmpty}><p>Your cart is empty</p></div>) :
-        (<div className={styles.root}>
+      <div className={styles.root}>
+        <h2>Shopping Cart</h2>
+        <div className={styles.cartContainer}>
           <div className={styles.cartDetailsCol}>
             <h3>Products</h3>
             {cart.map(product => <CartProduct
@@ -49,7 +49,8 @@ const Cart = () => {
               <Button onClick={handleContinue}>Continue Shopping</Button>
             </div>
           </div>
-        </div>)}
+        </div>
+      </div>
     </Container>
   );
 };
@@ -59,3 +60,5 @@ export default Cart;
 
 // <label htmlFor="comment-input">Add comments:</label>
 //<textarea rows="3" cols="50" id="comment-input" value={comment} onChange={e => setComment(e.target.value)} className={styles.formInput}/>
+
+//{cartTotal === 0 ? (<div className={styles.cartEmpty}><p>Your cart is empty</p></div>) :

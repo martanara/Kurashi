@@ -46,6 +46,10 @@
           &:hover {
             color: $color-gray;
           }
+
+          &.active {
+            color: $color-sakura-pink;
+          }
         }
       }
     }
@@ -71,7 +75,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .root {
     .navLinks{
       ul {

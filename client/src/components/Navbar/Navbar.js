@@ -19,11 +19,11 @@ const Navbar = () => {
       </div>
       <div className={styles.navLinks}>
         <ul className={clsx(isNavExpanded && styles.isExpanded)}>
-          <li><NavLink to="/category/NewArrivals" >New Arrivals</NavLink></li>
-          <li><NavLink to="/category/Home">Home</NavLink></li>
-          <li><NavLink to="/category/Kitchen">Kitchen</NavLink></li>
-          <li><NavLink to="/category/Stationery">Stationery</NavLink></li>
-          <li><NavLink to="category/Fashion">Fashion</NavLink></li>
+          <li><NavLink to="/category/NewArrivals" className={({ isActive }) => isActive ? styles.active : styles.inActive}>New Arrivals</NavLink></li>
+          <li><NavLink to="/category/Home" className={({ isActive }) => isActive? styles.active : styles.inActive}>Home</NavLink></li>
+          <li><NavLink to="/category/Kitchen" className={({ isActive }) => isActive ? styles.active : styles.inActive}>Kitchen</NavLink></li>
+          <li><NavLink to="/category/Stationery" className={({ isActive }) => isActive ? styles.active : styles.inActive}>Stationery</NavLink></li>
+          <li><NavLink to="category/Fashion" className={({ isActive }) => isActive? styles.active : styles.inActive}>Fashion</NavLink></li>
         </ul>
         <Link to="/cart"><button className={styles.button}><FontAwesomeIcon icon={faCartShopping} /></button></Link>
         <button className={styles.button}><FontAwesomeIcon icon={faUser} /></button>
