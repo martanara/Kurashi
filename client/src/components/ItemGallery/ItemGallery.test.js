@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Carousel from './Carousel';
+import ItemGallery from './ItemGallery';
 
-describe('Component Carousel', () => {
+describe('Component ItemGallery', () => {
   it('should render without crashing', () => {
-    const component = shallow(<Carousel />);
+    const component = shallow(<ItemGallery />);
     expect(component).toBeTruthy();
   });
 });

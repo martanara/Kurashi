@@ -24,6 +24,7 @@ const Checkout = () => {
   const [postalCode, setPostalCode] = useState('');
   const [city, setCity] = useState('');
   const [phone, setPhone] = useState('');
+  const [comment, setComment] = useState('');
 
   const handleSubmit = () => {
     console.log('checkout');
@@ -48,7 +49,7 @@ const Checkout = () => {
           {cart.map(product =>
             <div key={product._id} className={styles.itemContainer}>
               <div className={styles.itemImg}>
-                <img alt={product.name} src={product.img}/>
+                <img alt={product.name} src={product.img[0]}/>
               </div>
               <div className={styles.itemDetails}>
                 <p>{product.name}</p>
@@ -139,6 +140,16 @@ const Checkout = () => {
             onChange={(e) => setPhone(e.target.value)}
           />
           {errors.phone && <span className={styles.error}>Phone number is required.</span>}
+          <label htmlFor="comment-input">Add comments:</label>
+          <textarea
+            rows="5"
+            cols="60"
+            id="comment-input"
+            value={comment}
+            onChange={e => setComment(e.target.value)}
+            className={styles.formInput}
+            placeholder="If you wish to personalize your products please let us know the details"
+          />
           <div className={styles.buttons}>
             <Button type="submit">Place order</Button>
             <Link to="/cart">Back to cart</Link>

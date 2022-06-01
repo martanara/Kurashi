@@ -22,13 +22,14 @@ const CartProduct = ({ _id, name, img, price, totalPrice, amount,  color, select
 
   const [quantity, setQuantity] = useState(amount);
   const [itemTotalPrice, setItemTotalPrice] = useState(totalPrice);
+  const [comment, setComment] = useState('');
 
   const dispatch = useDispatch();
 
   const handleAmountChange = (newAmount) => {
     setQuantity(newAmount);
     setItemTotalPrice(price * newAmount);
-    dispatch(updateCartAmount({_id, amount: parseInt(newAmount), totalPrice: price * newAmount}));
+    dispatch(updateCartAmount({_id, amount: parseInt(newAmount), totalPrice: price * newAmount, comment}));
   };
 
   const removeItem = () => {
@@ -38,7 +39,7 @@ const CartProduct = ({ _id, name, img, price, totalPrice, amount,  color, select
   return (
     <div className={styles.cartProduct}>
       <div className={styles.imgContainer}>
-        <Link to={`/category/${categories[1]}/item/${_id}`}><img alt={name} src={img}/></Link>
+        <Link to={`/category/${categories[1]}/item/${_id}`}><img alt={name} src={img[0]}/></Link>
       </div>
       <div className={styles.productDetails}>
         <Link to={`/category/${categories[1]}/item/${_id}`}><h4>{name}</h4></Link>
@@ -59,7 +60,7 @@ const CartProduct = ({ _id, name, img, price, totalPrice, amount,  color, select
 CartProduct.propTypes = {
   _id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  img: PropTypes.array.isRequired,
   price: PropTypes.number.isRequired,
   totalPrice: PropTypes.number.isRequired,
   amount: PropTypes.number.isRequired,

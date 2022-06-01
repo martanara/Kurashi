@@ -10,6 +10,7 @@ import { getProductById } from '../../redux/productsRedux';
 import { addToCart } from '../../redux/cartRedux';
 
 import Button from '../Button/Button';
+import ImageSlider from '../ImageSlider/ImageSlider';
 import Container from '../Container/Container';
 
 import styles from './Item.module.scss';
@@ -61,7 +62,7 @@ const Item = () => {
   return (
     <Container>
       <div className={styles.root}>
-        <img alt={product.name} src={product.img}/>
+        <img alt={product.name} src={product.img[0]}/>
         <div className={styles.description}>
           <h3>{product.name}</h3>
           <p>$ {product.price} USD</p>
@@ -88,6 +89,9 @@ const Item = () => {
             <Button type="submit" className={styles.button}>Add to cart</Button>
           </form>
         </div>
+      </div>
+      <div className={styles.gallery}>
+        <ImageSlider images={product.img}/>
       </div>
     </Container>
   );

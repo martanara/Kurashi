@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Container from '../Container/Container';
 import Gallery from '../Gallery/Gallery';
 import Hero from '../Hero/Hero';

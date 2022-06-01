@@ -3,7 +3,7 @@
 .root {
   @include flex(row, center, top);
   flex-wrap: wrap;
-  padding: 120px 30px 60px 30px;
+  padding: 120px 30px 10px 30px;
   gap: 10px;
 
   img {
@@ -54,6 +54,10 @@
       }
     }
   }
+}
+
+.gallery {
+  margin: 60px auto;
 }
 
 @media (max-width: 576px) {

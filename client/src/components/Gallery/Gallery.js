@@ -37,7 +37,6 @@ const Gallery = () => {
             </div>
           </Link>
         </div>
-
         <div className={styles.element}>
           <Link to="/category/Fashion">
             <img alt="girl with sandals" src="/images/featured/pexels-alena-darmel-8989556.jpg"/>

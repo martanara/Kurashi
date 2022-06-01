@@ -29,7 +29,7 @@ const Category = () => {
           {
             products.map(product =>
               <div key={product._id} className={styles.productBox}>
-                <Link to={`item/${product._id}`}><img alt={product.name} src={product.img}/></Link>
+                <Link to={`item/${product._id}`}><img alt={product.name} src={product.img[0]}/></Link>
                 <Link to={`item/${product._id}`}>
                   <div className={styles.productCover}>
                     <p>View More</p>

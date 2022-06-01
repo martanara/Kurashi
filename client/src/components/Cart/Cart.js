@@ -56,9 +56,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-
-// <label htmlFor="comment-input">Add comments:</label>
-//<textarea rows="3" cols="50" id="comment-input" value={comment} onChange={e => setComment(e.target.value)} className={styles.formInput}/>
-
-//{cartTotal === 0 ? (<div className={styles.cartEmpty}><p>Your cart is empty</p></div>) :

@@ -95,6 +95,12 @@
       color: $color-dark-gray;
     }
 
+    textarea {
+      outline: none;
+      border: 1px solid $color-gray;
+      padding: 10px;
+    }
+
     .doubleInput {
       width: 100%;
       @include flex(row, space-between, center);
