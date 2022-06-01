@@ -1,15 +1,16 @@
 @import '../../styles/settings.scss';
 
+
 .root {
   padding: 120px 30px 60px 30px;
 
-  .notFound {
+  .thankyou {
     height: 200px;
     text-align: center;
 
     p {
       font-size: $base-size * 2;
-      color: $color-warning;
+      color: $color-sakura-pink;
     }
   }
 }

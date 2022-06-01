@@ -9,7 +9,9 @@ const NotFound = () => {
   return (
     <Container>
       <div className={styles.root}>
-        <p>Page not found</p>
+        <div className={styles.notFound}>
+          <p>Page not found</p>
+        </div>
       </div>
     </Container>
   );

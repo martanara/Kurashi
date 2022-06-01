@@ -5,6 +5,7 @@ import { API_URL } from '../config';
 export const getAllProducts = ({products}) => products.data;
 export const getProductsByCategory = ({products}, categoryName) => products.data.filter(product => product.categories.includes(categoryName));
 export const getProductById = ({products}, productId) => products.data.find(product => product._id === productId);
+export const getProductByName = ({products}, productName) => products.data.find(product => product.name === productName);
 
 /* action name creator */
 const reducerName = 'products';

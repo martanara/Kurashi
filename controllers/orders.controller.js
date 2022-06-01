@@ -28,31 +28,13 @@ exports.getOrderById = async (req, res) => {
 };
 
 exports.addNewOrder = async (req, res) => {
-  const { customerInfo, orderDetails } = req.body;
+  const { products, productTotal, shippingFee, comment, firstName, lastName, country, address, postalCode, city, phone } = req.body;
 
   try {
-    const newOrder = new Order({ customerInfo, orderDetails });
+    const newOrder = new Order({ products, productTotal, shippingFee, comment, firstName, lastName, country, address, postalCode, city, phone });
     await newOrder.save();
     res.json(newOrder);
   } catch(err) {
-    if(NODE_ENV === 'production') console.log('Database error...');
-    else res.status(500).json(err);
-  }
-};
-
-exports.editOrder = async (req, res) => {
-  const { customerInfo, orderDetails } = req.body;
-
-  try {
-    const order = await order.findById(req.params.id);
-    if(order){
-      order.customerInfo = customerInfo;
-      order.orderDetails = orderDetails;
-      await order.save();
-      res.json(await order.findById(req.params.id));
-    } else res.status(404).json({ message: 'Not found' });
-  }
-  catch(err) {
     if(NODE_ENV === 'production') console.log('Database error...');
     else res.status(500).json(err);
   }

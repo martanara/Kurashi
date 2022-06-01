@@ -12,8 +12,8 @@ import Container from '../Container/Container';
 import styles from './Highlights.module.scss';
 
 const Highlights = () => {
-  const highlightedProductId = '6297335bb21cb592df3db0a2';
-  const highlightedProductPath = '/category/Fashion/item/6297335bb21cb592df3db0a2';
+  const highlightedProductId = '62937aa0a1b69d98b5013275';
+  const highlightedProductPath = '/category/Fashion/item/62937aa0a1b69d98b5013275';
   const highlightedCategory = 'Fashion';
   const highlightedProduct = useSelector(state => getProductById(state, highlightedProductId));
   const highlightedProducts = useSelector(state => getProductsByCategory(state, highlightedCategory));

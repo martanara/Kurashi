@@ -1,0 +1,297 @@
+
+
+
+db.products.insertMany([{
+      name: "Brass Teapot",
+      price: 63,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      color: "black",
+      img: [
+        "/images/products/kitchen/pexels-eva-elijas-6945199.jpg",
+        "/images/products/kitchen/pexels-eva-elijas-6945199.jpg",
+        "/images/products/kitchen/pexels-eva-elijas-6945199.jpg",
+        "/images/products/kitchen/pexels-eva-elijas-6945199.jpg",
+        "/images/products/kitchen/pexels-eva-elijas-6945199.jpg"
+      ],
+      variants: [],
+      sizes: [{
+        name: "one size",
+        stock: 5
+      }],
+      categories: ["NewArrivals", "Kitchen"]
+    },
+
+{
+      name: "Maneki Neko",
+      price: 65,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      img: [
+        "/images/products/home/pexels-miguel-á-padriñán-932261.jpg",
+        "/images/products/home/pexels-miguel-á-padriñán-932261.jpg",
+        "/images/products/home/pexels-miguel-á-padriñán-932261.jpg",
+        "/images/products/home/pexels-miguel-á-padriñán-932261.jpg",
+        "/images/products/home/pexels-miguel-á-padriñán-932261.jpg"
+      ],
+      color: "tan",
+      sizes: [{
+        name: "one size",
+        stock: 5
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Home"]
+    },
+    {
+      name: "Wooden Vase",
+      price: 82,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      img: [
+        "/images/products/home/pexels-eva-elijas-6952248.jpg",
+        "/images/products/home/pexels-eva-elijas-6952248.jpg",
+        "/images/products/home/pexels-eva-elijas-6952248.jpg",
+        "/images/products/home/pexels-eva-elijas-6952248.jpg",
+        "/images/products/home/pexels-eva-elijas-6952248.jpg"
+      ],
+      color: "brown",
+      sizes: [{
+        name: "one size",
+        stock: 5
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Home"]
+    },
+    {
+      name: "Stone Flower Pot",
+      price: 40,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      img: [
+        "/images/products/home/pexels-stephanie-ho-993626.jpg",
+        "/images/products/home/pexels-stephanie-ho-993626.jpg",
+        "/images/products/home/pexels-stephanie-ho-993626.jpg",
+        "/images/products/home/pexels-stephanie-ho-993626.jpg",
+        "/images/products/home/pexels-stephanie-ho-993626.jpg",
+      ],
+      color: "brown",
+      sizes: [{
+        name: "one size",
+        stock: 5
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Home"]
+    },
+    {
+      name: "Clay Flower Vase",
+      price: 38,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      img: [
+        "/images/products/home/pexels-tara-winstead-6692129.jpg",
+        "/images/products/home/pexels-tara-winstead-6692129.jpg",
+        "/images/products/home/pexels-tara-winstead-6692129.jpg",
+        "/images/products/home/pexels-tara-winstead-6692129.jpg",
+        "/images/products/home/pexels-tara-winstead-6692129.jpg",
+      ],
+      color: "teal",
+      sizes: [{
+        name: "one size",
+        stock: 5
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Home"]
+    },
+    {
+      name: "Cotton Socks",
+      price: 10,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      img: [
+        "/images/products/fashion/pexels-mikhail-nilov-6968427.jpg",
+        "/images/products/fashion/pexels-mikhail-nilov-6968427.jpg",
+        "/images/products/fashion/pexels-mikhail-nilov-6968427.jpg",
+        "/images/products/fashion/pexels-mikhail-nilov-6968427.jpg",
+        "/images/products/fashion/pexels-mikhail-nilov-6968427.jpg"
+      ],
+      color: "white",
+      sizes: [{
+        name: "35-38",
+        stock: 5
+      },
+      {
+        name: "39-42",
+        stock: 3
+      }],
+      variants: [
+        { id: 12,
+          color: "gray"
+        }],
+      categories: ["NewArrivals", "Fashion"]
+    },
+    {
+      name: "Cotton Socks",
+      price: "10",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      img: [
+        "/images/products/fashion/pexels-alena-shekhovtcova-6995704.jpg",
+        "/images/products/fashion/pexels-alena-shekhovtcova-6995704.jpg",
+        "/images/products/fashion/pexels-alena-shekhovtcova-6995704.jpg",
+        "/images/products/fashion/pexels-alena-shekhovtcova-6995704.jpg",
+        "/images/products/fashion/pexels-alena-shekhovtcova-6995704.jpg",
+      ],
+      color: "gray",
+      sizes: [{
+        name: "35-38",
+        stock: 1
+      },
+      {
+        name: "39-42",
+        stock: 3
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Fashion"]
+    },
+    {
+      name: "Linen Set",
+      price: 112,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      color: "colorful",
+      img: [
+        "/images/products/fashion/pexels-thirdman-6599685.jpg",
+        "/images/products/fashion/pexels-thirdman-6599685.jpg",
+        "/images/products/fashion/pexels-thirdman-6599685.jpg",
+        "/images/products/fashion/pexels-thirdman-6599685.jpg",
+        "/images/products/fashion/pexels-thirdman-6599685.jpg",
+      ],
+      sizes: [{
+        name: "S",
+        stock: 5
+      },
+      {
+        name: "M",
+        stock: 3
+      },
+      {
+        name: "L",
+        stock: 3
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Fashion"]
+    },
+    {
+      name: "Cotton Summer Blouse",
+      price: 62,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      color: "white",
+      img: [
+        "/images/products/fashion/pexels-teona-swift-6850609.jpg",
+        "/images/products/fashion/pexels-teona-swift-6850609.jpg",
+        "/images/products/fashion/pexels-teona-swift-6850609.jpg",
+        "/images/products/fashion/pexels-teona-swift-6850609.jpg",
+        "/images/products/fashion/pexels-teona-swift-6850609.jpg",
+      ],
+      sizes: [{
+        name: "S",
+        stock: 5
+      },
+      {
+        name: "M",
+        stock: 3
+      },
+      {
+        name: "L",
+        stock: 3
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Fashion"]
+    },
+    {
+      name: "Patterened Stationery",
+      price: 15,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      color: "indigo",
+      img: [
+        "/images/products/stationery/pexels-eva-elijas-7967827.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7967827.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7967827.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7967827.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7967827.jpg",
+      ],
+      sizes: [{
+        name: "one size",
+        stock: 5
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Stationery"]
+    },
+    {
+      name: "Patterened Stationery",
+      price: 15,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      color: "colorful",
+      img: [
+        "/images/products/stationery/pexels-eva-elijas-7967944.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7967944.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7967944.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7967944.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7967944.jpg",
+      ],
+      sizes: [{
+        name: "one size",
+        stock: 5
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Stationery"]
+    },
+    {
+      name: "Minimalistic Note Set",
+      price: 23,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      color: "white",
+      img: [
+        "/images/products/stationery/pexels-polina-kovaleva-8101485.jpg",
+        "/images/products/stationery/pexels-polina-kovaleva-8101485.jpg",
+        "/images/products/stationery/pexels-polina-kovaleva-8101485.jpg",
+        "/images/products/stationery/pexels-polina-kovaleva-8101485.jpg",
+        "/images/products/stationery/pexels-polina-kovaleva-8101485.jpg"
+      ],
+      sizes: [{
+        name: "one size",
+        stock: 3
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Stationery"]
+    },
+    {
+      name: "Post Card Set",
+      price: 7,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      color: "white",
+      img: [
+        "/images/products/stationery/pexels-eva-elijas-7957369.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7957369.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7957369.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7957369.jpg",
+        "/images/products/stationery/pexels-eva-elijas-7957369.jpg",
+      ],
+      sizes: [{
+        name: "one size",
+        stock: 8
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Stationery"]
+    },
+    {
+      name: "Paper Clips Set",
+      price: 12,
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique, massa ut consectetur sagittis, enim ipsum fringilla nibh, ac tempor purus est vestibulum dui. Proin aliquet posuere nisl, vel vestibulum nisl interdum quis. Vestibulum in arcu faucibus, vestibulum magna id, venenatis mauris. Fusce placerat vel eros quis blandit. Donec sed volutpat augue.",
+      color: "silver",
+      img: [
+        "/images/products/stationery/pexels-karolina-grabowska-4226804.jpg",
+        "/images/products/stationery/pexels-karolina-grabowska-4226804.jpg",
+        "/images/products/stationery/pexels-karolina-grabowska-4226804.jpg",
+        "/images/products/stationery/pexels-karolina-grabowska-4226804.jpg",
+        "/images/products/stationery/pexels-karolina-grabowska-4226804.jpg",
+      ],
+      sizes: [{
+        name: "one size",
+        stock: 3
+      }],
+      variants: [],
+      categories: ["NewArrivals", "Stationery"]
+    }])

@@ -32,12 +32,9 @@ const NODE_ENV = process.env.NODE_ENV;
 let dbUri = '';
 
 /* MONGOOSE */
-// dbUri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.rt8m7.mongodb.net/kurashi?retryWrites=true&w=majority`;
 
-// if(NODE_ENV === 'production') dbUri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.rt8m7.mongodb.net/kurashi?retryWrites=true&w=majority`;
-// else dbUri = 'mongodb://localhost:27017/kurashi';
-
-dbUri = 'mongodb://localhost:27017/kurashi';
+if(NODE_ENV === 'production') dbUri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.rt8m7.mongodb.net/kurashi?retryWrites=true&w=majority`;
+else dbUri = 'mongodb://localhost:27017/kurashi';
 
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 

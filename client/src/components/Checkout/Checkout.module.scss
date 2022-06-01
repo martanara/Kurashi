@@ -1,5 +1,10 @@
 @import '../../styles/settings.scss';
 
+.thankyou {
+  margin: 100px auto;
+  color: $color-sakura-pink;
+}
+
 .root {
   padding: 120px 30px 60px 30px;
   @include flex(column, center, center);

@@ -13,11 +13,13 @@ const createActionName = name => `app/${reducerName}/${name}`;
 const ADD_TO_CART = createActionName('ADD_TO_CART');
 const UPDATE_CART_AMOUNT = createActionName('UPDATE_CART_AMOUNT');
 const REMOVE_FROM_CART = createActionName('REMOVE_FROM_CART');
+const CLEAR_CART = createActionName('CLEAR_CART');
 
 /* action creators */
 export const addToCart = payload => ({ type: ADD_TO_CART, payload });
 export const updateCartAmount = payload => ({ type: UPDATE_CART_AMOUNT, payload });
 export const removefromCart = payload => ({ type: REMOVE_FROM_CART, payload });
+export const clearCart = () => ({ type: CLEAR_CART });
 
 /* thunk creators */
 
@@ -43,6 +45,8 @@ export const reducer = (statePart = initialState, action = {}) => {
       return statePart.map(product => product._id === action.payload._id ? {...product, amount: action.payload.amount, totalPrice: action.payload.totalPrice} : product);
     case REMOVE_FROM_CART:
       return statePart.filter(product => product._id !== action.payload);
+    case CLEAR_CART:
+      return statePart = [];
     default:
       return statePart;
   }

@@ -1,9 +1,14 @@
 import React from 'react';
 import styles from './Checkout.module.scss';
+
 import Container from '../Container/Container';
-import { useSelector } from 'react-redux';
-import { getCart, getCartTotal } from '../../redux/cartRedux';
-import { Navigate, useNavigate, Link } from 'react-router-dom';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { getCart, getCartTotal, clearCart } from '../../redux/cartRedux';
+import { addOrderRequest } from '../../redux/ordersRedux';
+
+import { Navigate, Link } from 'react-router-dom';
+
 import Button from '../Button/Button';
 
 import { useState } from 'react';
@@ -13,8 +18,10 @@ import { useForm } from 'react-hook-form';
 const Checkout = () => {
   const { register, handleSubmit: validate, formState: { errors } } = useForm();
 
-  const cart = useSelector(getCart);
-  const cartTotal = useSelector(getCartTotal);
+  const dispatch = useDispatch();
+
+  const cart = useSelector(state => getCart(state));
+  const cartTotal = useSelector(state => getCartTotal(state));
 
   const cartSummary = cart.map(product => {
     return {_id: product._id, amount: product.amount, price: product.price};
@@ -31,16 +38,21 @@ const Checkout = () => {
   const [comment, setComment] = useState('');
 
   const handleSubmit = () => {
-    console.log(cartSummary);
-    // const orderDetails = ({
-    //   buyer: { email, country, firstName, lastName, address, postalCode, city, phone },
-    //   order: { cart, cartTotal}
-    // });
-    // console.log(orderDetails);
-
-    // We need: item, amount, item total price etc
-    // dispatch - updateDataBase - product amounts
-    // clear cart
+    const order = {
+      products: cartSummary,
+      productTotal: cartTotal,
+      shippingFee: 20,
+      comment,
+      firstName,
+      lastName,
+      country,
+      address,
+      postalCode,
+      city,
+      phone,
+    };
+    dispatch(addOrderRequest(order));
+    dispatch(clearCart());
   };
 
   const calculateTotal = () => cartTotal + 20;
@@ -73,13 +85,14 @@ const Checkout = () => {
           <label htmlFor="email-input">Contact Information</label>
           <input
             {...register('email', { required: true })}
+            autoComplete="off"
             type="text"
             id="email-input"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          {errors.email && <span className={styles.error}>Email is required. Title can have up to 200 characters.</span>}
+          {errors.email && <span className={styles.error}>Email is required.</span>}
           <label htmlFor="comment-input">Shipping address</label>
           <select id="country-select" onChange={(e) => setCountry(e.target.value)}>
             <option value="United Kingdom">United Kingdom</option>
