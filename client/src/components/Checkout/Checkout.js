@@ -16,6 +16,10 @@ const Checkout = () => {
   const cart = useSelector(getCart);
   const cartTotal = useSelector(getCartTotal);
 
+  const cartSummary = cart.map(product => {
+    return {_id: product._id, amount: product.amount, price: product.price};
+  });
+
   const [email, setEmail] = useState('');
   const [country, setCountry] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -27,7 +31,7 @@ const Checkout = () => {
   const [comment, setComment] = useState('');
 
   const handleSubmit = () => {
-    console.log('checkout');
+    console.log(cartSummary);
     // const orderDetails = ({
     //   buyer: { email, country, firstName, lastName, address, postalCode, city, phone },
     //   order: { cart, cartTotal}
@@ -68,7 +72,7 @@ const Checkout = () => {
         <form onSubmit={validate(handleSubmit)} className={styles.form}>
           <label htmlFor="email-input">Contact Information</label>
           <input
-            {...register('email', { required: true, maxLength: 200 })}
+            {...register('email', { required: true })}
             type="text"
             id="email-input"
             placeholder="Email"
@@ -85,7 +89,7 @@ const Checkout = () => {
           </select>
           <div className={styles.doubleInput}>
             <input
-              {...register('firstName', { required: true, maxLength: 30 })}
+              {...register('firstName', { required: true })}
               type="text"
               id="first-name"
               placeholder="First Name"
@@ -93,7 +97,7 @@ const Checkout = () => {
               onChange={(e) => setFirstName(e.target.value)}
             />
             <input
-              {...register('lastName', { required: true, maxLength: 30 })}
+              {...register('lastName', { required: true })}
               type="text"
               id="last-name"
               placeholder="Last Name"
@@ -114,14 +118,14 @@ const Checkout = () => {
           {errors.address && <span className={styles.error}>Address is required.</span>}
           <div className={styles.doubleInput}>
             <input
-              {...register('postalCode', { required: true, maxLength: 15 })}
+              {...register('postalCode', { required: true})}
               type="text"
               id="postal-code"
               placeholder="Postal code: XX-XXX"
               value={postalCode}
               onChange={(e) => setPostalCode(e.target.value)}/>
             <input
-              {...register('city', { required: true, maxLength: 30 })}
+              {...register('city', { required: true })}
               type="text"
               id="city"
               placeholder="City"
@@ -132,7 +136,7 @@ const Checkout = () => {
           {errors.postalCode && <span className={styles.error}>Postal code is required.</span>}
           {errors.city && <span className={styles.error}>City is required.</span>}
           <input
-            {...register('phone', { required: true, maxLength: 15 })}
+            {...register('phone', { required: true })}
             type="text"
             id="phone"
             placeholder="Phone: XXXXXXXXX"
