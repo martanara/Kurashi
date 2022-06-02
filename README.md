@@ -3,7 +3,7 @@
 E-commerce website for a brand that celebrates Japanese craftsmanship, design, and aesthetics.\
 Technologies: JavaScript, React, Redux, Node.js, Express.js, MongoDB.
 
-[See on Heroku](https://github.com/facebook/create-react-app)
+[See on Heroku](https://kurashi-app.herokuapp.com/)
 
 ## Running locally
 
