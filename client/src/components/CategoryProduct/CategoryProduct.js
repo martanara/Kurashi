@@ -2,11 +2,11 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import styles from './Product.module.scss';
+import styles from './CategoryProduct.module.scss';
 
 import { Link } from 'react-router-dom';
 
-const Product = (props) => {
+const CategoryProduct = (props) => {
   return (
     <div className={styles.productBox}>
       <Link to={`item/${props.id}`}><img alt={props.name} src={props.img[0]}/></Link>
@@ -21,11 +21,11 @@ const Product = (props) => {
   );
 };
 
-Product.propTypes = {
+CategoryProduct.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   img: PropTypes.array.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };
 
-export default Product;
+export default CategoryProduct;

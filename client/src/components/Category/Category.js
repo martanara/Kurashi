@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { getProductsByCategory } from '../../redux/productsRedux';
 
 import Container from '../Container/Container';
-import Product from '../Product/Product';
+import CategoryProduct from '../CategoryProduct/CategoryProduct';
 
 import styles from './Category.module.scss';
 
@@ -27,7 +27,7 @@ const Category = () => {
         <div className={styles.productContainer}>
           {
             products.map(product =>
-              <Product 
+              <CategoryProduct 
                 key={product._id} 
                 id={product._id} 
                 name={product.name} 

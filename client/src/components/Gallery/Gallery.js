@@ -1,68 +1,74 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
-
 import Container from '../Container/Container';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 import styles from './Gallery.module.scss';
 
 const Gallery = () => {
+  const galleryItems = [
+    {
+      category: 'Home',
+      alt: 'woods',
+      img: '/images/featured/karen-OeU_hJuxv0E-unsplash.jpg',
+      banner: 'small',
+      line1: 'New Arrivals',
+      line2: 'everything for your plants',
+    },
+    {
+      category: 'Kitchen',
+      alt: 'tea ceremony',
+      img: '/images/featured/pexels-charlotte-may-5946632.jpg',
+      banner: 'large',
+      line1: 'Tea Ceremony',
+    },
+    {
+      category: 'Stationery',
+      alt: 'stationery',
+      img: '/images/featured/pexels-polina-kovaleva-8101480.jpg',
+      banner: 'small',
+      line1: 'Back in Stock',
+      line2: 'elegant stationery',
+    },
+    {
+      category: 'Fashion',
+      alt: 'girl with sandals',
+      img: '/images/featured/pexels-alena-darmel-8989556.jpg',
+      banner: 'small',
+      line1: 'Summer fashion',
+      line2: 'linen, cotton and more',
+    },
+    {
+      category: 'Home',
+      alt: 'ikebana',
+      img: '/images/featured/linh-le-uP2QOCUBu7A-unsplash.jpg',
+      banner: 'large',
+      line1: 'Ikebana',
+    },
+    {
+      category: 'Home',
+      alt: 'clay potterys',
+      img: '/images/featured/pexels-tara-winstead-6692149.jpg',
+      banner: 'small',
+      line1: 'New Arrivals',
+      line2: 'minimalistic clay pottery',
+    },
+  ];
 
   return (
     <Container>
       <div className={styles.root}>
-        <div className={styles.element}>
-          <Link to="/category/Home">
-            <img alt="woods" src="/images/featured/karen-OeU_hJuxv0E-unsplash.jpg"/>
-            <div className={styles.bannerSmall}>
-              <p>New Arrivals</p>
-              <p>everything for your plants</p>
-            </div>
-          </Link>
-        </div>
-        <div className={styles.element}>
-          <Link to="/category/Kitchen">
-            <img alt="tea ceremony" src="/images/featured/pexels-charlotte-may-5946632.jpg"/>
-            <div className={styles.bannerLarge}>
-              <p>Tea Ceremony</p>
-            </div>
-          </Link>
-        </div>
-        <div className={styles.element}>
-          <Link to="/category/Fashion">
-            <img alt="stationery" src="/images/featured/pexels-polina-kovaleva-8101480.jpg"/>
-            <div className={styles.bannerSmall}>
-              <p>Back in Stock</p>
-              <p>elegant stationery</p>
-            </div>
-          </Link>
-        </div>
-        <div className={styles.element}>
-          <Link to="/category/Fashion">
-            <img alt="girl with sandals" src="/images/featured/pexels-alena-darmel-8989556.jpg"/>
-            <div className={styles.bannerSmall}>
-              <p>Summer fashion</p>
-              <p>linen, cotton and more</p>
-            </div>
-          </Link>
-        </div>
-        <div className={styles.element}>
-          <Link to="/category/Home">
-            <img alt="ikebana" src="/images/featured/linh-le-uP2QOCUBu7A-unsplash.jpg"/>
-            <div className={styles.bannerLarge}>
-              <p>Ikebana</p>
-            </div>
-          </Link>
-        </div>
-        <div className={styles.element}>
-          <Link to="/category/Home">
-            <img alt="clay pottery" src="/images/featured/pexels-tara-winstead-6692149.jpg"/>
-            <div className={styles.bannerSmall}>
-              <p>New Arrivals</p>
-              <p>minimalistic clay pottery</p>
-            </div>
-          </Link>
-        </div>
+        {
+          galleryItems.map(item => (
+            <GalleryItem 
+              key={item.img}
+              alt={item.alt}
+              img={item.img}
+              banner={item.banner}
+              line1={item.line1}
+              line2={item.line2}
+            />))
+        }
       </div>
     </Container>
   );

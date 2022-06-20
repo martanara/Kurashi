@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Product from './Product';
+import CategoryProduct from './CategoryProduct';
 
 
-describe('Component Product', () => {
+describe('Component CategoryProduct', () => {
   it('should render without crashing', () => {
     const component = shallow(
-      <Product id={'123'} name={'product'} price={12} img={['img']} />
+      <CategoryProduct id={'123'} name={'product'} price={12} img={['img']} />
     );
     expect(component).toBeTruthy();
   });

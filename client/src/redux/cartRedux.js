@@ -41,7 +41,6 @@ export const reducer = (statePart = initialState, action = {}) => {
         return [...statePart, { ...action.payload}];
       }
     case UPDATE_CART_AMOUNT:
-      console.log(action.payload);
       return statePart.map(product => product._id === action.payload._id ? {...product, amount: action.payload.amount, totalPrice: action.payload.totalPrice} : product);
     case REMOVE_FROM_CART:
       return statePart.filter(product => product._id !== action.payload);

@@ -17,8 +17,6 @@ const Highlights = () => {
   const highlightedProduct = useSelector(state => getProductByName(state, highlightedProductName));
   const highlightedProducts = useSelector(state => getProductsByCategory(state, highlightedCategory));
 
-  console.log(highlightedProduct);
-
   if (highlightedProduct) return (
     <Container>
       <div className={styles.root}>
