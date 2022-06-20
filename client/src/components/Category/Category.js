@@ -2,12 +2,11 @@ import React from 'react';
 
 import { useParams } from 'react-router';
 
-import { Link } from 'react-router-dom';
-
 import { useSelector } from 'react-redux';
 import { getProductsByCategory } from '../../redux/productsRedux';
 
 import Container from '../Container/Container';
+import Product from '../Product/Product';
 
 import styles from './Category.module.scss';
 
@@ -28,16 +27,13 @@ const Category = () => {
         <div className={styles.productContainer}>
           {
             products.map(product =>
-              <div key={product._id} className={styles.productBox}>
-                <Link to={`item/${product._id}`}><img alt={product.name} src={product.img[0]}/></Link>
-                <Link to={`item/${product._id}`}>
-                  <div className={styles.productCover}>
-                    <p>View More</p>
-                  </div>
-                </Link>
-                <p><Link to={`item/${product._id}`}>{product.name}</Link></p>
-                <p>$ {product.price} USD</p>
-              </div>
+              <Product 
+                key={product._id} 
+                id={product._id} 
+                name={product.name} 
+                img={product.img} 
+                price={product.price}
+              />
             )
           }
         </div>
