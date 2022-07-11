@@ -2,6 +2,8 @@
   "name": "kurashi-app",
   "version": "0.1.0",
   "private": true,
+  "author": "Marta Nara <marta.kos1230@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@babel/eslint-parser": "^7.18.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",

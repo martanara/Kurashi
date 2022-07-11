@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 import styles from './GalleryItem.module.scss';
 
 const GalleryItem = (props) => {
+  console.log(props.alt, props.category);
+
   return (
     <div className={styles.element}>
       <Link to={`/category/${props.category}`}>

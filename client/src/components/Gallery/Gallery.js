@@ -62,6 +62,7 @@ const Gallery = () => {
           galleryItems.map(item => (
             <GalleryItem 
               key={item.img}
+              category={item.category}
               alt={item.alt}
               img={item.img}
               banner={item.banner}
