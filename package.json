@@ -16,6 +16,6 @@
     "start": "npm-run-all -l -p start:*",
     "start:server": "nodemon server.js",
     "start:client": "cd client && yarn start",
-    "build": "cd client && yarn install && yarn build"
+    "build": "node scripts/create-env.js && cd client && yarn install && yarn build"
   }
 }
