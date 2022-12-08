@@ -7,8 +7,6 @@ import Highlights from '../Highlights/Highlights';
 import styles from './Home.module.scss';
 
 const Home = () => {
-  console.log(process.env.REACT_APP_MONGODB_USERNAME);
-  console.log(process.env.REACT_APP_MONGODB_PASSWORD);
   return (
     <div className={styles.root}>
       <Hero />
