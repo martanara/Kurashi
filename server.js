@@ -36,6 +36,8 @@ let dbUri = '';
 if(NODE_ENV === 'production') dbUri = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.rt8m7.mongodb.net/kurashi?retryWrites=true&w=majority`;
 else dbUri = 'mongodb://localhost:27017/kurashi';
 
+console.log(process.env.MONGODB_USERNAME);
+
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
