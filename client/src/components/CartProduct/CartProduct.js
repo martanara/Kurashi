@@ -22,7 +22,7 @@ const CartProduct = ({ _id, name, img, price, totalPrice, amount,  color, select
 
   const [quantity, setQuantity] = useState(amount);
   const [itemTotalPrice, setItemTotalPrice] = useState(totalPrice);
-  const [comment, setComment] = useState('');
+  const [comment] = useState('');
 
   const dispatch = useDispatch();
 
